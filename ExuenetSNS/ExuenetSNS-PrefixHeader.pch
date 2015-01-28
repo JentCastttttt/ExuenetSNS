@@ -1,0 +1,36 @@
+//
+//  ExuenetSNS-PrefixHeader.pch
+//  ExuenetSNS
+//
+//  Created by Cao JianRong on 15-1-28.
+//  Copyright (c) 2015年 Cao JianRong. All rights reserved.
+//
+
+#ifndef ExuenetSNS_PrefixHeader_pch
+#define ExuenetSNS_PrefixHeader_pch
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIColor+extends.h"
+#import "PublicDefine.h"
+
+//当前程序版本号
+#define KBundleVersion @"BundleVersion"
+#define ISIOS5 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0)
+#define ISIOS6 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0)
+#define ISIOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+
+/*
+ 控制NSLog的输出
+ TARGET_IPHONE_SIMULATOR 显示输出
+ 真机 不显示输出
+ [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], 与__FUNCTION__重复
+ */
+
+#if TARGET_IPHONE_SIMULATOR
+#define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+#endif
