@@ -8,10 +8,14 @@
 
 #import "BaseViewController.h"
 #import "LoginView.h"
+#import "RegisiterView.h"
+#import "ForgorPasswordView.h"
 
-@interface LoginViewController : BaseViewController<LoginViewDelegate>
+@interface LoginViewController : BaseViewController<LoginViewDelegate,RegisiterViewDelegate,ForgorPasswordViewDelegate>
 {
     LoginView *loginView;
+    RegisiterView *regisiterView;
+    ForgorPasswordView *forgetView;
 }
 
 @end

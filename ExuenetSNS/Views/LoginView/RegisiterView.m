@@ -1,17 +1,16 @@
 //
-//  LoginView.m
+//  RegisiterView.m
 //  ExuenetSNS
 //
 //  Created by Cao JianRong on 15-1-30.
 //  Copyright (c) 2015年 Cao JianRong. All rights reserved.
 //
 
-#import "LoginView.h"
+#import "RegisiterView.h"
 
-@implementation LoginView
+@implementation RegisiterView
 @synthesize loginText;
 @synthesize pwdText;
-@synthesize iconView;
 @synthesize delegate;
 
 - (id)initWithFrame:(CGRect)frame
@@ -26,22 +25,13 @@
 
 - (void)createInitView
 {
-    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.frame];
+    UIImageView *bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [bgView setImage:[UIImage imageNamed:@"index_bg"]];
     [self addSubview:bgView];
     [bgView release];
     
-    CGFloat cornerRadius = 80.0f;
-    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake((kScreenWidth - cornerRadius)/2.0, 70, cornerRadius, cornerRadius)];
-    icon.layer.cornerRadius = cornerRadius/2.0;
-    icon.layer.borderColor = [UIColor whiteColor].CGColor;
-    icon.layer.borderWidth = 2.0f;
-    self.iconView = icon;
-    [self addSubview:icon];
-    [icon release];
-    
     CGFloat boundsOffset = 30;
-    UIView *nameView = [[UIView alloc] initWithFrame:CGRectMake(boundsOffset, icon.frame.origin.y + icon.frame.size.height + 15, kScreenWidth - boundsOffset*2, 40)];
+    UIView *nameView = [[UIView alloc] initWithFrame:CGRectMake(boundsOffset, 150, kScreenWidth - boundsOffset*2, 40)];
     nameView.layer.cornerRadius = 3.0f;
     nameView.backgroundColor = [UIColor colorWithWhite:0.75 alpha:0.75];
     [self addSubview:nameView];
@@ -89,55 +79,38 @@
     
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     loginButton.frame = CGRectMake(boundsOffset, pwdView.frame.origin.y + pwdView.frame.size.height + 15, pwdView.frame.size.width, pwdView.frame.size.height);
-    [loginButton setTitle:@"登录" forState:UIControlStateNormal];
+    [loginButton setTitle:@"注册账号" forState:UIControlStateNormal];
     [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [loginButton setBackgroundColor:[UIColor colorWithRed:0.98 green:0.67 blue:0.23 alpha:1]];
     [loginButton.titleLabel setFont:[UIFont boldSystemFontOfSize:13.0f]];
-    [loginButton addTarget:self action:@selector(loginInService:) forControlEvents:UIControlEventTouchUpInside];
+    [loginButton addTarget:self action:@selector(regisiterUser:) forControlEvents:UIControlEventTouchUpInside];
     loginButton.layer.cornerRadius = 3.0f;
     [self addSubview:loginButton];
     
     UIButton *forgot = [UIButton buttonWithType:UIButtonTypeCustom];
     forgot.frame = CGRectMake(boundsOffset, loginButton.frame.origin.y + loginButton.frame.size.height, 55, pwdView.frame.size.height);
-    [forgot setTitle:@"忘记密码" forState:UIControlStateNormal];
+    [forgot setTitle:@"返回登录" forState:UIControlStateNormal];
     [forgot setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [forgot setBackgroundColor:[UIColor clearColor]];
     [forgot.titleLabel setFont:[UIFont systemFontOfSize:13.0f]];
-    [forgot addTarget:self action:@selector(forgotPassword:) forControlEvents:UIControlEventTouchUpInside];
+    [forgot addTarget:self action:@selector(backToLoginView:) forControlEvents:UIControlEventTouchUpInside];
     forgot.titleLabel.textAlignment = NSTextAlignmentLeft;
     [self addSubview:forgot];
-    
-    UIButton *regisiter = [UIButton buttonWithType:UIButtonTypeCustom];
-    regisiter.frame = CGRectMake(boundsOffset, forgot.frame.origin.y + forgot.frame.size.height + 50, pwdView.frame.size.width, pwdView.frame.size.height);
-    [regisiter setTitle:@"注册账号" forState:UIControlStateNormal];
-    [regisiter setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [regisiter setBackgroundColor:[UIColor colorWithRed:0.98 green:0.67 blue:0.23 alpha:0.35]];
-    [regisiter.titleLabel setFont:[UIFont systemFontOfSize:13.0f]];
-    [regisiter addTarget:self action:@selector(regisiterNewUser:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:regisiter];
 }
 
-- (void)loginInService:(id)sender
+- (void)regisiterUser:(id)sender
 {
     [self endEditing:YES];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(loginInService:)]) {
-        [self.delegate loginInService:sender];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(regisiterUser:)]) {
+        [self.delegate regisiterUser:sender];
     }
 }
 
-- (void)forgotPassword:(id)sender
+- (void)backToLoginView:(id)sender
 {
     [self endEditing:YES];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(forgotPassword:)]) {
-        [self.delegate forgotPassword:sender];
-    }
-}
-
-- (void)regisiterNewUser:(id)sender
-{
-    [self endEditing:YES];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(regisiterNewUser:)]) {
-        [self.delegate regisiterNewUser:sender];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(backToLoginView:)]) {
+        [self.delegate backToLoginView:sender];
     }
 }
 
@@ -164,8 +137,6 @@
 {
     [loginText release];
     [pwdText release];
-    [iconView release];
     [super dealloc];
 }
-
 @end

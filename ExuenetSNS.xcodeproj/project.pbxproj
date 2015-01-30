@@ -13,6 +13,8 @@
 		9E1930CD1A7B6719006304C7 /* WWSideslipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1930CC1A7B6719006304C7 /* WWSideslipViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		9E1930D11A7B677B006304C7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1930D01A7B677B006304C7 /* LoginViewController.m */; };
 		9E1930D61A7B689E006304C7 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1930D51A7B689E006304C7 /* LoginView.m */; };
+		9E1930D91A7B7B85006304C7 /* RegisiterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1930D81A7B7B85006304C7 /* RegisiterView.m */; };
+		9E1930DC1A7B7F90006304C7 /* ForgorPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1930DB1A7B7F90006304C7 /* ForgorPasswordView.m */; };
 		9EC5C4621A7B150B00FEEE10 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C4611A7B150B00FEEE10 /* WelcomeViewController.m */; };
 		9EC5C4651A7B17D600FEEE10 /* DiscGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C4641A7B17D600FEEE10 /* DiscGroupViewController.m */; };
 		9EC5C4681A7B17E700FEEE10 /* FriendsCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C4671A7B17E700FEEE10 /* FriendsCircleViewController.m */; };
@@ -68,6 +70,10 @@
 		9E1930D01A7B677B006304C7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9E1930D41A7B689E006304C7 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		9E1930D51A7B689E006304C7 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		9E1930D71A7B7B85006304C7 /* RegisiterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisiterView.h; sourceTree = "<group>"; };
+		9E1930D81A7B7B85006304C7 /* RegisiterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisiterView.m; sourceTree = "<group>"; };
+		9E1930DA1A7B7F90006304C7 /* ForgorPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgorPasswordView.h; sourceTree = "<group>"; };
+		9E1930DB1A7B7F90006304C7 /* ForgorPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgorPasswordView.m; sourceTree = "<group>"; };
 		9EC5C4601A7B150B00FEEE10 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		9EC5C4611A7B150B00FEEE10 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		9EC5C4631A7B17D600FEEE10 /* DiscGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscGroupViewController.h; sourceTree = "<group>"; };
@@ -208,6 +214,10 @@
 			children = (
 				9E1930D41A7B689E006304C7 /* LoginView.h */,
 				9E1930D51A7B689E006304C7 /* LoginView.m */,
+				9E1930D71A7B7B85006304C7 /* RegisiterView.h */,
+				9E1930D81A7B7B85006304C7 /* RegisiterView.m */,
+				9E1930DA1A7B7F90006304C7 /* ForgorPasswordView.h */,
+				9E1930DB1A7B7F90006304C7 /* ForgorPasswordView.m */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -541,6 +551,7 @@
 				9ED70C521A78C4E400884C0A /* UIButton+AFNetworking.m in Sources */,
 				9ED70C661A78C6E900884C0A /* Utility.m in Sources */,
 				9EC5C4621A7B150B00FEEE10 /* WelcomeViewController.m in Sources */,
+				9E1930D91A7B7B85006304C7 /* RegisiterView.m in Sources */,
 				9ED70C541A78C4E400884C0A /* UIProgressView+AFNetworking.m in Sources */,
 				9ED70C351A78C4D800884C0A /* AFHTTPRequestOperation.m in Sources */,
 				9ED70BBE1A789B1B00884C0A /* AppDelegate.m in Sources */,
@@ -549,6 +560,7 @@
 				9ED70C361A78C4D800884C0A /* AFHTTPRequestOperationManager.m in Sources */,
 				9ED70C071A78A09700884C0A /* BaseViewController.m in Sources */,
 				9ED70C531A78C4E400884C0A /* UIImageView+AFNetworking.m in Sources */,
+				9E1930DC1A7B7F90006304C7 /* ForgorPasswordView.m in Sources */,
 				9ED70C371A78C4D800884C0A /* AFHTTPSessionManager.m in Sources */,
 				9ED70C501A78C4E400884C0A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				9ED70C4F1A78C4E400884C0A /* AFNetworkActivityIndicatorManager.m in Sources */,
