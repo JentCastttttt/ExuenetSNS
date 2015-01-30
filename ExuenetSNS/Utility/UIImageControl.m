@@ -1,9 +1,9 @@
 //
 //  UIImageControl.m
-//  AFNetworkingDemo
+//  ExuenetSNS
 //
-//  Created by Cao JianRong on 14-8-14.
-//  Copyright (c) 2014年 Cao JianRong. All rights reserved.
+//  Created by Cao JianRong on 15-1-28.
+//  Copyright (c) 2015年 Cao JianRong. All rights reserved.
 //
 
 #import "UIImageControl.h"
@@ -12,7 +12,8 @@
 @synthesize imageTitle;
 @synthesize imageUrl;
 
-- (id)init {
+- (id)init
+{
     self = [super init];
     if (self) {
         frame = [self CGRectForOrientation];
@@ -42,7 +43,8 @@
     return self;
 }
 
-- (id)initWithImage:(UIImage *)image {
+- (id)initWithImage:(UIImage *)image
+{
     self = [self init];
     if (self) {
         contentView.image = image;
@@ -52,7 +54,8 @@
     return self;
 }
 
-- (id)initWithUrl:(NSString *)url andImageTitle:(NSString *)title {
+- (id)initWithUrl:(NSString *)url andImageTitle:(NSString *)title
+{
     self = [self init];
     if (self) {
         self.imageUrl = url;
@@ -116,11 +119,13 @@
     contentView.center = CGPointMake(scrollView.contentSize.width/2 + offsetX,scrollView.contentSize.height/2 + offsetY);
 }
 
--(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
     return contentView;
 }
 
-- (void)setImageSize:(CGSize)iamgeSize {
+- (void)setImageSize:(CGSize)iamgeSize
+{
     CGRect contentFrame = frame;
 //    CGFloat imageView_X = (iamgeSize.width > contentFrame.size.width) ? contentFrame.size.width : iamgeSize.width;
     CGFloat imageView_Y=(iamgeSize.height > contentFrame.size.height) ? contentFrame.size.height : iamgeSize.height;
@@ -138,7 +143,8 @@
     }
 }
 
--(CGRect)CGRectForOrientation{
+-(CGRect)CGRectForOrientation
+{
     UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     if (orientation == UIInterfaceOrientationLandscapeLeft) {
         return CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width);

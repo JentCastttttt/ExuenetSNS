@@ -8,6 +8,7 @@
 
 #import "IndexViewController.h"
 #import "LeftIndexViewController.h"
+#import "AFHTTPRequestOperationManager.h"
 
 @interface IndexViewController ()
 
@@ -15,10 +16,41 @@
 
 @implementation IndexViewController
 
+- (void)viewDidAppear:(BOOL)animated
+{
+//    [super viewDidAppear:animated];
+    NSLog(@"%.2f",self.view.frame.size.height);
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+//    [super viewWillAppear:animated];
+    NSLog(@"%.2f",self.view.frame.size.height);
+}
+
+- (void)loadView
+{
+    [super loadView];
+    NSLog(@"load");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"%.2f",self.view.frame.size.height);
     
+}
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    NSLog(@"1233");
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    NSLog(@"123");
 }
 
 - (void)didReceiveMemoryWarning {

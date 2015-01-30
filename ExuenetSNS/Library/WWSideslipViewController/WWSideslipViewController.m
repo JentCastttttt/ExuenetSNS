@@ -128,7 +128,8 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-    if ( [touch.view isKindOfClass:[UINavigationBar class]]) {
+    if ( [touch.view isKindOfClass:[UINavigationBar class]] ||
+          [touch.view isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
         //防止截获导航栏返回按钮的返回事件
         return NO;
     }
@@ -169,7 +170,7 @@
 #pragma mark - 为了界面美观，所以隐藏了状态栏。如果需要显示则去掉此代码
 - (BOOL)prefersStatusBarHidden
 {
-    return NO; //返回NO表示要显示，返回YES将hiden
+    return YES; //返回NO表示要显示，返回YES将hiden
 }
 
 @end

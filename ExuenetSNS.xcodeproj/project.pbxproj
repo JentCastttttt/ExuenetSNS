@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0ACB2A1A7A29B20038E158 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0ACB291A7A29B20038E158 /* Security.framework */; };
+		9E0ACB2C1A7A29BB0038E158 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0ACB2B1A7A29BB0038E158 /* SystemConfiguration.framework */; };
+		9E0ACB2E1A7A29C50038E158 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0ACB2D1A7A29C50038E158 /* libz.dylib */; };
+		9EC5C4621A7B150B00FEEE10 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C4611A7B150B00FEEE10 /* WelcomeViewController.m */; };
+		9EC5C4651A7B17D600FEEE10 /* DiscGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C4641A7B17D600FEEE10 /* DiscGroupViewController.m */; };
+		9EC5C4681A7B17E700FEEE10 /* FriendsCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C4671A7B17E700FEEE10 /* FriendsCircleViewController.m */; };
+		9EC5C46B1A7B17F100FEEE10 /* ApplyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C46A1A7B17F100FEEE10 /* ApplyCenterViewController.m */; };
+		9EC5C4751A7B1AF300FEEE10 /* MyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C4741A7B1AF300FEEE10 /* MyCenterViewController.m */; };
 		9ED70BBB1A789B1B00884C0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED70BBA1A789B1B00884C0A /* main.m */; };
 		9ED70BBE1A789B1B00884C0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED70BBD1A789B1B00884C0A /* AppDelegate.m */; };
 		9ED70BC61A789B1B00884C0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ED70BC51A789B1B00884C0A /* Images.xcassets */; };
@@ -24,7 +32,6 @@
 		9ED70C121A78A1B200884C0A /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED70C111A78A1B200884C0A /* IndexViewController.m */; };
 		9ED70C151A78A20700884C0A /* LeftIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED70C141A78A20700884C0A /* LeftIndexViewController.m */; };
 		9ED70C181A78A60200884C0A /* index_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ED70C171A78A60200884C0A /* index_bg@2x.png */; };
-		9ED70C1F1A78C2AD00884C0A /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED70C1E1A78C2AD00884C0A /* WelcomeViewController.m */; };
 		9ED70C351A78C4D800884C0A /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED70C231A78C4D700884C0A /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		9ED70C361A78C4D800884C0A /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED70C251A78C4D700884C0A /* AFHTTPRequestOperationManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		9ED70C371A78C4D800884C0A /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED70C271A78C4D800884C0A /* AFHTTPSessionManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -50,6 +57,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E0ACB291A7A29B20038E158 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9E0ACB2B1A7A29BB0038E158 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9E0ACB2D1A7A29C50038E158 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9EC5C4601A7B150B00FEEE10 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		9EC5C4611A7B150B00FEEE10 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		9EC5C4631A7B17D600FEEE10 /* DiscGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscGroupViewController.h; sourceTree = "<group>"; };
+		9EC5C4641A7B17D600FEEE10 /* DiscGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscGroupViewController.m; sourceTree = "<group>"; };
+		9EC5C4661A7B17E700FEEE10 /* FriendsCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsCircleViewController.h; sourceTree = "<group>"; };
+		9EC5C4671A7B17E700FEEE10 /* FriendsCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsCircleViewController.m; sourceTree = "<group>"; };
+		9EC5C4691A7B17F100FEEE10 /* ApplyCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyCenterViewController.h; sourceTree = "<group>"; };
+		9EC5C46A1A7B17F100FEEE10 /* ApplyCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyCenterViewController.m; sourceTree = "<group>"; };
+		9EC5C4731A7B1AF300FEEE10 /* MyCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterViewController.h; sourceTree = "<group>"; };
+		9EC5C4741A7B1AF300FEEE10 /* MyCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterViewController.m; sourceTree = "<group>"; };
 		9ED70BB51A789B1B00884C0A /* 爪爪社区.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爪爪社区.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED70BB91A789B1B00884C0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ED70BBA1A789B1B00884C0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,8 +101,6 @@
 		9ED70C141A78A20700884C0A /* LeftIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftIndexViewController.m; sourceTree = "<group>"; };
 		9ED70C171A78A60200884C0A /* index_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index_bg@2x.png"; sourceTree = "<group>"; };
 		9ED70C191A78A67300884C0A /* PublicDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicDefine.h; sourceTree = "<group>"; };
-		9ED70C1D1A78C2AD00884C0A /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
-		9ED70C1E1A78C2AD00884C0A /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		9ED70C221A78C4D700884C0A /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		9ED70C231A78C4D700884C0A /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		9ED70C241A78C4D700884C0A /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -134,6 +152,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E0ACB2E1A7A29C50038E158 /* libz.dylib in Frameworks */,
+				9E0ACB2C1A7A29BB0038E158 /* SystemConfiguration.framework in Frameworks */,
+				9E0ACB2A1A7A29B20038E158 /* Security.framework in Frameworks */,
 				9ED70C5D1A78C59300884C0A /* CoreGraphics.framework in Frameworks */,
 				9ED70C5B1A78C58A00884C0A /* CoreTelephony.framework in Frameworks */,
 			);
@@ -142,6 +163,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EC5C45B1A7B14CA00FEEE10 /* ApplyCenterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9EC5C4691A7B17F100FEEE10 /* ApplyCenterViewController.h */,
+				9EC5C46A1A7B17F100FEEE10 /* ApplyCenterViewController.m */,
+			);
+			path = ApplyCenterViewController;
+			sourceTree = "<group>";
+		};
+		9EC5C45C1A7B14CA00FEEE10 /* DiscGroupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9EC5C4631A7B17D600FEEE10 /* DiscGroupViewController.h */,
+				9EC5C4641A7B17D600FEEE10 /* DiscGroupViewController.m */,
+			);
+			path = DiscGroupViewController;
+			sourceTree = "<group>";
+		};
+		9EC5C45D1A7B14CA00FEEE10 /* FriendsCircleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9EC5C4661A7B17E700FEEE10 /* FriendsCircleViewController.h */,
+				9EC5C4671A7B17E700FEEE10 /* FriendsCircleViewController.m */,
+			);
+			path = FriendsCircleViewController;
+			sourceTree = "<group>";
+		};
+		9EC5C45F1A7B14D500FEEE10 /* WelcomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9EC5C4601A7B150B00FEEE10 /* WelcomeViewController.h */,
+				9EC5C4611A7B150B00FEEE10 /* WelcomeViewController.m */,
+			);
+			path = WelcomeViewController;
+			sourceTree = "<group>";
+		};
+		9EC5C4721A7B1AE500FEEE10 /* MyCenterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9EC5C4731A7B1AF300FEEE10 /* MyCenterViewController.h */,
+				9EC5C4741A7B1AF300FEEE10 /* MyCenterViewController.m */,
+			);
+			path = MyCenterViewController;
+			sourceTree = "<group>";
+		};
 		9ED70BAC1A789B1B00884C0A = {
 			isa = PBXGroup;
 			children = (
@@ -246,7 +312,12 @@
 		9ED70C021A78A00100884C0A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9EC5C4721A7B1AE500FEEE10 /* MyCenterViewController */,
+				9EC5C45B1A7B14CA00FEEE10 /* ApplyCenterViewController */,
+				9EC5C45D1A7B14CA00FEEE10 /* FriendsCircleViewController */,
+				9EC5C45C1A7B14CA00FEEE10 /* DiscGroupViewController */,
 				9ED70C0F1A78A1A400884C0A /* IndexViewController */,
+				9EC5C45F1A7B14D500FEEE10 /* WelcomeViewController */,
 				9ED70C041A78A08600884C0A /* BaseViewController */,
 			);
 			path = ViewControllers;
@@ -284,8 +355,6 @@
 				9ED70C111A78A1B200884C0A /* IndexViewController.m */,
 				9ED70C131A78A20700884C0A /* LeftIndexViewController.h */,
 				9ED70C141A78A20700884C0A /* LeftIndexViewController.m */,
-				9ED70C1D1A78C2AD00884C0A /* WelcomeViewController.h */,
-				9ED70C1E1A78C2AD00884C0A /* WelcomeViewController.m */,
 			);
 			path = IndexViewController;
 			sourceTree = "<group>";
@@ -351,6 +420,9 @@
 		9ED70C5E1A78C5C500884C0A /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				9E0ACB2D1A7A29C50038E158 /* libz.dylib */,
+				9E0ACB2B1A7A29BB0038E158 /* SystemConfiguration.framework */,
+				9E0ACB291A7A29B20038E158 /* Security.framework */,
 				9ED70C5C1A78C59300884C0A /* CoreGraphics.framework */,
 				9ED70C5A1A78C58A00884C0A /* CoreTelephony.framework */,
 			);
@@ -439,12 +511,15 @@
 				9ED70C3D1A78C4D800884C0A /* AFURLSessionManager.m in Sources */,
 				9ED70C3A1A78C4D800884C0A /* AFURLConnectionOperation.m in Sources */,
 				9ED70C551A78C4E400884C0A /* UIRefreshControl+AFNetworking.m in Sources */,
+				9EC5C46B1A7B17F100FEEE10 /* ApplyCenterViewController.m in Sources */,
 				9ED70C521A78C4E400884C0A /* UIButton+AFNetworking.m in Sources */,
 				9ED70C661A78C6E900884C0A /* Utility.m in Sources */,
+				9EC5C4621A7B150B00FEEE10 /* WelcomeViewController.m in Sources */,
 				9ED70C541A78C4E400884C0A /* UIProgressView+AFNetworking.m in Sources */,
 				9ED70C351A78C4D800884C0A /* AFHTTPRequestOperation.m in Sources */,
 				9ED70BBE1A789B1B00884C0A /* AppDelegate.m in Sources */,
 				9ED70C511A78C4E400884C0A /* UIAlertView+AFNetworking.m in Sources */,
+				9EC5C4681A7B17E700FEEE10 /* FriendsCircleViewController.m in Sources */,
 				9ED70C361A78C4D800884C0A /* AFHTTPRequestOperationManager.m in Sources */,
 				9ED70C071A78A09700884C0A /* BaseViewController.m in Sources */,
 				9ED70C0E1A78A11200884C0A /* WWSideslipViewController.m in Sources */,
@@ -454,10 +529,11 @@
 				9ED70C4F1A78C4E400884C0A /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9ED70C151A78A20700884C0A /* LeftIndexViewController.m in Sources */,
 				9ED70BBB1A789B1B00884C0A /* main.m in Sources */,
-				9ED70C1F1A78C2AD00884C0A /* WelcomeViewController.m in Sources */,
 				9ED70C391A78C4D800884C0A /* AFSecurityPolicy.m in Sources */,
 				9ED70C0A1A78A0A800884C0A /* UIColor+extends.m in Sources */,
 				9ED70C3B1A78C4D800884C0A /* AFURLRequestSerialization.m in Sources */,
+				9EC5C4651A7B17D600FEEE10 /* DiscGroupViewController.m in Sources */,
+				9EC5C4751A7B1AF300FEEE10 /* MyCenterViewController.m in Sources */,
 				9ED70C591A78C50500884C0A /* AFHttpRequestCenter.m in Sources */,
 				9ED70C381A78C4D800884C0A /* AFNetworkReachabilityManager.m in Sources */,
 				9ED70C611A78C60E00884C0A /* UIImageControl.m in Sources */,
@@ -576,6 +652,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: JIN QI (A94XXBU278)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExuenetSNS/Utility",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExuenetSNS/ExuenetSNS-PrefixHeader.pch";
@@ -593,6 +673,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: JIN QI (A94XXBU278)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExuenetSNS/Utility",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExuenetSNS/ExuenetSNS-PrefixHeader.pch";
@@ -623,6 +707,7 @@
 				9ED70BDA1A789B1C00884C0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
