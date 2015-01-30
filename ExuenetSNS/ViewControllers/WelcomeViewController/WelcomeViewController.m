@@ -36,8 +36,6 @@
 
 - (void)showMainController:(id)sender
 {
-    NSLog(@"%.2f",self.view.frame.size.height);
-    
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:20.0f],NSFontAttributeName,[UIColor colorFromString:@"ffffff"],NSForegroundColorAttributeName,nil];
     
     //主页
@@ -51,7 +49,6 @@
     navi.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_set_click"];
     navi.navigationBar.translucent = NO;
     [rootView release];
-    
     
     DiscGroupViewController *discRoot = [[DiscGroupViewController alloc] init];
     discRoot.title = @"讨论组";
@@ -87,7 +84,7 @@
     [appRoot release];
     
     MyCenterViewController *myRoot = [[MyCenterViewController alloc] init];
-    myRoot.title = @"讨论组";
+    myRoot.title = @"我";
     UINavigationController *myNavi = [[UINavigationController alloc] initWithRootViewController:myRoot];
     myNavi.navigationBar.titleTextAttributes = dict;
     myNavi.navigationBar.tintColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1];
@@ -122,7 +119,8 @@
     [slide release];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

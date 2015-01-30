@@ -13,6 +13,7 @@
 
 #import "UIColor+extends.h"
 #import "PublicDefine.h"
+#import "LoginViewController.h"
 
 //当前程序版本号
 #define KBundleVersion @"BundleVersion"

@@ -16,41 +16,11 @@
 
 @implementation IndexViewController
 
-- (void)viewDidAppear:(BOOL)animated
-{
-//    [super viewDidAppear:animated];
-    NSLog(@"%.2f",self.view.frame.size.height);
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-//    [super viewWillAppear:animated];
-    NSLog(@"%.2f",self.view.frame.size.height);
-}
-
-- (void)loadView
-{
-    [super loadView];
-    NSLog(@"load");
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"%.2f",self.view.frame.size.height);
     
-}
-
-- (void)viewWillLayoutSubviews
-{
-    [super viewWillLayoutSubviews];
-    NSLog(@"1233");
-}
-
-- (void)viewDidLayoutSubviews
-{
-    [super viewDidLayoutSubviews];
-    NSLog(@"123");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,20 +30,10 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    LeftIndexViewController *index = [[LeftIndexViewController alloc] init];
-    index.title = @"next";
-    [self.navigationController pushViewController:index animated:YES];
-    [index release];
+    LoginViewController *login = [[LoginViewController alloc] init];
+    login.title = @"登录";
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:login animated:YES completion:^{}];
+    [login release];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
