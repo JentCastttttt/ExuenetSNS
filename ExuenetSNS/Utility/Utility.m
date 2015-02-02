@@ -10,6 +10,14 @@
 
 @implementation Utility
 
++ (void)showLoginViewController
+{
+    LoginViewController *login = [[LoginViewController alloc] init];
+    login.title = @"登录";
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:login animated:YES completion:^{}];
+    [login release];
+}
+
 //TODO:文件在项目中的目录
 + (NSString *)bundlePath:(NSString *)fileName
 {

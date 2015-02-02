@@ -10,6 +10,8 @@
 
 @interface Utility : NSObject
 
++ (void)showLoginViewController;
+
 + (NSString *)bundlePath:(NSString *)fileName;
 
 + (NSString *)documentsPath:(NSString *)fileName;
