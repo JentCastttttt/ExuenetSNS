@@ -9,6 +9,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, WWMenuStatus) {
+    WWMenuStatusCenterOpen,
+    WWMenuStatusLeftOpen,
+    WWMenuStatusRightOpen
+};
+
 @interface WWSideslipViewController : UIViewController <UIGestureRecognizerDelegate>{
 @private
     UIViewController *leftControl;
@@ -18,6 +24,8 @@
     UIImageView * imgBackground;
     
     CGFloat scalef;
+    
+    WWMenuStatus status;   //0:显示中间主页 1:左主页 2:右主页
 }
 
 //滑动速度系数-建议在0.5-1之间。默认为0.5

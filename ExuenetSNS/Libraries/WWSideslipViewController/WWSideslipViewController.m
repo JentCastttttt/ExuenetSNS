@@ -15,6 +15,7 @@
 
 @implementation WWSideslipViewController
 @synthesize speedf,sideslipTapGes;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -41,17 +42,25 @@
                    andRightView:(UIViewController *)RighView
                         andBackgroundImage:(UIImage *)image;
 {
-    if(self){
+    if(self)
+    {
         speedf = 0.5;
         
-        leftControl = LeftView;
         mainControl = MainView;
+        leftControl = LeftView;
         righControl = RighView;
+        leftControl.view.hidden = YES;
+        righControl.view.hidden = YES;
         
         UIImageView * imgview = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
         [imgview setImage:image];
         [self.view addSubview:imgview];
         
+        [self.view addSubview:leftControl.view];
+        [self.view addSubview:righControl.view];
+        [self.view addSubview:mainControl.view];
+        
+    
         //滑动手势
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePan:)];
         [mainControl.view addGestureRecognizer:pan];
@@ -60,21 +69,11 @@
         sideslipTapGes= [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handeTap:)];
         [sideslipTapGes setNumberOfTapsRequired:1];
         sideslipTapGes.delegate = self;
-        [mainControl.view addGestureRecognizer:sideslipTapGes];
         
-        leftControl.view.hidden = YES;
-        righControl.view.hidden = YES;
-        
-        [self.view addSubview:leftControl.view];
-        [self.view addSubview:righControl.view];
-        
-        [self.view addSubview:mainControl.view];
-        
+        status = WWMenuStatusCenterOpen;
     }
     return self;
 }
-
-
 
 #pragma mark - 滑动手势
 - (void) handlePan: (UIPanGestureRecognizer *)rec{
@@ -123,11 +122,15 @@
         tap.view.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2,[UIScreen mainScreen].bounds.size.height/2);
         [UIView commitAnimations];
         scalef = 0;
+        status = WWMenuStatusCenterOpen;
     }
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
+    if (status == WWMenuStatusCenterOpen) {
+        return NO;
+    }
     if ( [touch.view isKindOfClass:[UINavigationBar class]] ||
           [touch.view isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
         //防止截获导航栏返回按钮的返回事件
@@ -140,6 +143,7 @@
 //恢复位置
 -(void)showMainView
 {
+    status = WWMenuStatusCenterOpen;
     [UIView beginAnimations:nil context:nil];
     mainControl.view.transform = CGAffineTransformScale(CGAffineTransformIdentity,1.0,1.0);
     mainControl.view.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2,[UIScreen mainScreen].bounds.size.height/2);
@@ -150,6 +154,7 @@
 //显示左视图
 -(void)showLeftView
 {
+    status = WWMenuStatusLeftOpen;
     [UIView beginAnimations:nil context:nil];
     mainControl.view.transform = CGAffineTransformScale(CGAffineTransformIdentity,0.8,0.8);
     mainControl.view.center = CGPointMake(340,[UIScreen mainScreen].bounds.size.height/2);
@@ -161,6 +166,7 @@
 //显示右视图
 -(void)showRighView
 {
+    status = WWMenuStatusRightOpen;
     [UIView beginAnimations:nil context:nil];
     mainControl.view.transform = CGAffineTransformScale(CGAffineTransformIdentity,0.8,0.8);
     mainControl.view.center = CGPointMake(-60,[UIScreen mainScreen].bounds.size.height/2);

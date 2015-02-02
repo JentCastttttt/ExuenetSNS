@@ -28,7 +28,7 @@
  [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], 与__FUNCTION__重复
  */
 
-#if TARGET_IPHONE_SIMULATOR
+#if 1//TARGET_IPHONE_SIMULATOR
 #define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
 #define NSLog(FORMAT, ...) nil

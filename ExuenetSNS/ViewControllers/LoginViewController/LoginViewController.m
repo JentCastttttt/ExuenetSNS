@@ -37,7 +37,7 @@
 
 - (void)forgotPassword:(id)sender
 {
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         loginView.frame = CGRectMake(-kScreenWidth, 0, kScreenWidth, kScreenHeight);
         forgetView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
     } completion:^(BOOL finished) {
@@ -47,7 +47,7 @@
 
 - (void)regisiterNewUser:(id)sender
 {
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         loginView.frame = CGRectMake(-kScreenWidth, 0, kScreenWidth, kScreenHeight);
         regisiterView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
     } completion:^(BOOL finished) {
@@ -63,7 +63,7 @@
 
 - (void)backToLoginView:(id)sender
 {
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         loginView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         regisiterView.frame = CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight);
     } completion:^(BOOL finished) {
@@ -85,7 +85,7 @@
 
 - (void)backToLogin:(id)sender
 {
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         loginView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         forgetView.frame = CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight);
     } completion:^(BOOL finished) {

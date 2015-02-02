@@ -8,6 +8,12 @@
 
 #import "BaseViewController.h"
 
-@interface IndexViewController : BaseViewController
-
+@interface IndexViewController : BaseViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+{
+    UICollectionView *waterView;
+    NSArray *headerArray;
+    NSMutableArray *discArray;
+    NSMutableArray *classmateArray;
+    NSMutableArray *applyArray;
+}
 @end
