@@ -7,7 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "HeaderInfoView.h"
 
-@interface MyCenterViewController : BaseViewController
-
+@interface MyCenterViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
+{
+    UITableView *infoTable;
+    NSArray *titleArray;
+    HeaderInfoView *infoView;
+}
 @end

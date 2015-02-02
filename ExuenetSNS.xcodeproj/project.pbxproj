@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4458D6711A7F98440083D650 /* HeaderInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4458D6701A7F98440083D650 /* HeaderInfoView.m */; };
 		9E0ACB2A1A7A29B20038E158 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0ACB291A7A29B20038E158 /* Security.framework */; };
 		9E0ACB2C1A7A29BB0038E158 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0ACB2B1A7A29BB0038E158 /* SystemConfiguration.framework */; };
 		9E0ACB2E1A7A29C50038E158 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0ACB2D1A7A29C50038E158 /* libz.dylib */; };
@@ -66,6 +67,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4458D66F1A7F98440083D650 /* HeaderInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderInfoView.h; sourceTree = "<group>"; };
+		4458D6701A7F98440083D650 /* HeaderInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderInfoView.m; sourceTree = "<group>"; };
 		9E0ACB291A7A29B20038E158 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9E0ACB2B1A7A29BB0038E158 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9E0ACB2D1A7A29C50038E158 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -188,6 +191,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4458D66E1A7F982B0083D650 /* MyCenterView */ = {
+			isa = PBXGroup;
+			children = (
+				4458D66F1A7F98440083D650 /* HeaderInfoView.h */,
+				4458D6701A7F98440083D650 /* HeaderInfoView.m */,
+			);
+			name = MyCenterView;
+			path = ../../../../../../leexmuller/Documents/GitHub/ExuenetSNS/ExuenetSNS/Views/MyCenterView;
+			sourceTree = "<group>";
+		};
 		9E1930C91A7B6719006304C7 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +230,7 @@
 		9E1930D21A7B6873006304C7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4458D66E1A7F982B0083D650 /* MyCenterView */,
 				9E576A6E1A7F365A009553DB /* IndexView */,
 				9E1930D31A7B6889006304C7 /* LoginView */,
 			);
@@ -578,6 +592,7 @@
 				9ED70C3D1A78C4D800884C0A /* AFURLSessionManager.m in Sources */,
 				9E576A741A7F36AB009553DB /* CollectionHeaderView.m in Sources */,
 				9ED70C3A1A78C4D800884C0A /* AFURLConnectionOperation.m in Sources */,
+				4458D6711A7F98440083D650 /* HeaderInfoView.m in Sources */,
 				9ED70C551A78C4E400884C0A /* UIRefreshControl+AFNetworking.m in Sources */,
 				9EC5C46B1A7B17F100FEEE10 /* ApplyCenterViewController.m in Sources */,
 				9ED70C521A78C4E400884C0A /* UIButton+AFNetworking.m in Sources */,
