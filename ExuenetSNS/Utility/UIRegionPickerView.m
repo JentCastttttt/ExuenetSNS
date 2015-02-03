@@ -13,11 +13,11 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 296, kScreenWidth, 296);
+    frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
         
         //加载数据
         provinces = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ProvincesAndCities.plist" ofType:nil]];
@@ -38,6 +38,8 @@
 - (void)creatrInitView
  {
      pickerCityView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 256, kScreenWidth, 256)];
+     
+     pickerCityView.backgroundColor = [UIColor whiteColor];
      
      pickerCityView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth; //这里设置了就可以自定义高度了，一般默认是无法修改其216像素的高度
      
@@ -72,6 +74,11 @@
      [tool release];
      
      [tool setItems:items];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self removeFromSuperview];
 }
 
 #pragma mark - PickerView lifecycle
