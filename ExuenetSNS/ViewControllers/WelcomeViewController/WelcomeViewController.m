@@ -43,6 +43,7 @@
     rootView.title = @"首页";
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:rootView];
     navi.navigationBar.titleTextAttributes = dict;
+//    [navi.navigationBar setBackgroundImage:[UIImage imageNamed:@"3.png"] forBarMetrics:UIBarMetricsDefault];
     navi.navigationBar.tintColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1];
     navi.navigationBar.barTintColor = [UIColor colorWithRed:0.99 green:0.62 blue:0.36 alpha:1];
     navi.tabBarItem.image = [UIImage imageNamed:@"icon_set_nomal"];
@@ -98,6 +99,7 @@
     [navi release]; [discNavi release]; [friNavi release]; [appNavi release]; [myNavi release];
     
     UITabBarController *tab = [[UITabBarController alloc] init];
+//    tab.tabBar.backgroundImage = [UIImage imageNamed:@"3.png"];//[UIColor colorWithRed:0.93 green:0.51 blue:0.39 alpha:1];
     tab.viewControllers = controlleItems;
     [tab.tabBar setTintColor:[UIColor colorWithRed:0.99 green:0.75 blue:0.38 alpha:1]];
     

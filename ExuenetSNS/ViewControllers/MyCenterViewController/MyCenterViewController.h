@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "HeaderInfoView.h"
+#import "ModifierViewController.h"
 
 @interface MyCenterViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
 {

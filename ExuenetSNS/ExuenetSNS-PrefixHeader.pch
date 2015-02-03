@@ -14,6 +14,9 @@
 #import "UIColor+extends.h"
 #import "PublicDefine.h"
 #import "LoginViewController.h"
+#import "QBImagePickerController.h"
+#import "Utility.h"
+#import "DataCenter.h"
 
 //当前程序版本号
 #define KBundleVersion @"BundleVersion"

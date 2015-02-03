@@ -68,6 +68,11 @@
     [tmpLabel release];
 }
 
+- (void)setCkicked:(headClick)complition
+{
+    click = [complition copy];
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [UIView animateWithDuration:0.3 animations:^{
@@ -80,6 +85,14 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         self.backgroundColor = [UIColor colorWithRed:0.48 green:0.31 blue:0.65 alpha:1];
+    } completion:^(BOOL finished) {
+        if (finished) {
+            headClick cl = [click retain];
+            if (cl) {
+                cl();
+            }
+            [cl release];
+        }
     }];
 }
 

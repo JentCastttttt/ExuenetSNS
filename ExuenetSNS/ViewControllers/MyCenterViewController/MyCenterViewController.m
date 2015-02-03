@@ -10,6 +10,12 @@
 
 @implementation MyCenterViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tabBarController.tabBar setHidden:NO];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,6 +36,12 @@
     
     infoView = [[HeaderInfoView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
     infoTable.tableHeaderView = infoView;
+    [infoView setCkicked:^{
+        ModifierViewController *controller = [[ModifierViewController alloc] init];
+        controller.title = @"个人信息";
+        [self.navigationController pushViewController:controller animated:YES];
+        [controller release];
+    }];
     [infoView release];
     
     titleArray = [[NSArray alloc] initWithObjects:@"签到赢积分",@"1.png",@"相册",@"1.png",@"文件",@"1.png",@"收藏",@"1.png",@"设置",@"1.png", nil];
