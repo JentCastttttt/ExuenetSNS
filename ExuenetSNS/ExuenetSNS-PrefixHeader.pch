@@ -11,12 +11,14 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#import "UIColor+extends.h"
 #import "PublicDefine.h"
 #import "LoginViewController.h"
 #import "QBImagePickerController.h"
 #import "Utility.h"
 #import "DataCenter.h"
+
+#import "UIColor+extends.h"
+#import "UIView+WhenTappedBlocks.h"
 
 //当前程序版本号
 #define KBundleVersion @"BundleVersion"

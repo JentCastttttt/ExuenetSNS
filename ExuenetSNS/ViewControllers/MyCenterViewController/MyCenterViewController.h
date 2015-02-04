@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 #import "HeaderInfoView.h"
 #import "ModifierViewController.h"
+#import "AlbumViewController.h"
 
 @interface MyCenterViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
 {

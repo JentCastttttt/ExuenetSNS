@@ -149,7 +149,7 @@
         {
             //修改地区
             pickerView = [[UIRegionPickerView alloc] init];
-            [pickerView chooseCityBlock:^(LocationModel *model) {
+            [pickerView chooseCityWithCompletion:^(LocationModel *model) {
                 [DataCenter shareInstance].userInfo.area = [NSString stringWithFormat:@"%@ %@",model.state,model.city];
                 NSIndexPath *iconPath = [NSIndexPath indexPathForRow:5 inSection:0];
                 [infoTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:iconPath] withRowAnimation:UITableViewRowAnimationNone];

@@ -85,8 +85,8 @@
     }
     header.nameLabel.text = [headerArray objectAtIndex:indexPath.section];
     header.section = indexPath.section;
-    [header headerClickedAtSection:^(NSInteger section) {
-        NSLog(@"section %ld",header.section);
+    [header sectionClickedWithCompletion:^(NSInteger section) {
+        NSLog(@"section %ld",section);
     }];
     return header;
 }

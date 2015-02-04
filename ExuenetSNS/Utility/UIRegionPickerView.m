@@ -155,9 +155,9 @@
     [self removeFromSuperview];
 }
 
-- (void)chooseCityBlock:(citySelect)complition
+- (void)chooseCityWithCompletion:(citySelect)completion
 {
-    block = [complition copy];
+    block = [completion copy];
 }
 
 - (void)dealloc

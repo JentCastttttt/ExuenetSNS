@@ -8,17 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^headerClickedBlock)(NSInteger section);
+typedef void(^sectionClickedBlock)(NSInteger section);
 
 @interface CollectionHeaderView : UICollectionReusableView
 {
-    headerClickedBlock block;
+    sectionClickedBlock block;
     NSInteger section;
     UILabel *nameLabel;
 }
 @property (nonatomic, assign)NSInteger section;
 @property (nonatomic, retain)UILabel *nameLabel;
 
-- (void)headerClickedAtSection:(headerClickedBlock)completion;
+- (void)sectionClickedWithCompletion:(sectionClickedBlock)completion;
 
 @end

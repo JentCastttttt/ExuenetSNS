@@ -5,6 +5,7 @@
 //  Created by LeexMuller on 15/2/2.
 //  Copyright (c) 2015年 Cao JianRong. All rights reserved.
 //
+//  我的中心头部用户信息界面
 
 #import <UIKit/UIKit.h>
 
@@ -23,6 +24,6 @@ typedef void(^headClick)(void);
 @property (nonatomic, retain) UILabel *exuenetAcount;
 @property (nonatomic, retain) UIImageView *iconView;
 
-- (void)setCkicked:(headClick)complition;
+- (void)clickedWithCompletion:(headClick)complition;
 
 @end

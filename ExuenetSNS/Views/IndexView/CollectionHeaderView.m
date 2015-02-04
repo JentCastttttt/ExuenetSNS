@@ -56,14 +56,14 @@
 
 - (void)clicked:(id)sender
 {
-    headerClickedBlock clickBlock = [block retain];
+    sectionClickedBlock clickBlock = [block retain];
     if (clickBlock) {
         clickBlock(self.section);
     }
     [clickBlock release];
 }
 
-- (void)headerClickedAtSection:(headerClickedBlock)completion
+- (void)sectionClickedWithCompletion:(sectionClickedBlock)completion
 {
     block = [completion copy];
 }

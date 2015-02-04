@@ -21,6 +21,6 @@ typedef void(^citySelect)(LocationModel *model);
 }
 @property (strong, nonatomic) LocationModel *locate;
 
-- (void)chooseCityBlock:(citySelect)complition;
+- (void)chooseCityWithCompletion:(citySelect)completion;
 
 @end

@@ -6,15 +6,19 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F8148688-304A-4D58-A403-972E668194F9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ExuenetSNS</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>218317771E96797E2855396F2A60947A6A4FA2F3</key>
 		<string>https://github.com/HarrisLee/ExuenetSNS.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ExuenetSNS.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>218317771E96797E2855396F2A60947A6A4FA2F3</key>
-		<string>ExuenetSNS/</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/HarrisLee/ExuenetSNS.git</string>

@@ -36,7 +36,7 @@
     
     infoView = [[HeaderInfoView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
     infoTable.tableHeaderView = infoView;
-    [infoView setCkicked:^{
+    [infoView clickedWithCompletion:^{
         ModifierViewController *controller = [[ModifierViewController alloc] init];
         controller.title = @"个人信息";
         [self.navigationController pushViewController:controller animated:YES];
@@ -78,6 +78,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 0:
+        {
+            //签到
+        }
+            break;
+        case 1:
+        {
+            //相册AlbumViewController
+            AlbumViewController *controller = [[AlbumViewController alloc] init];
+            controller.title = [titleArray objectAtIndex:indexPath.row * 2];
+            [self.navigationController pushViewController:controller animated:YES];
+            [controller release];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning

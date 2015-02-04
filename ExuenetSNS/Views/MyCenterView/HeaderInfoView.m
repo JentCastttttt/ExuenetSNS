@@ -5,6 +5,7 @@
 //  Created by LeexMuller on 15/2/2.
 //  Copyright (c) 2015年 Cao JianRong. All rights reserved.
 //
+//  我的中心头部用户信息界面
 
 #import "HeaderInfoView.h"
 
@@ -68,9 +69,9 @@
     [tmpLabel release];
 }
 
-- (void)setCkicked:(headClick)complition
+- (void)clickedWithCompletion:(headClick)completion
 {
-    click = [complition copy];
+    click = [completion copy];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
