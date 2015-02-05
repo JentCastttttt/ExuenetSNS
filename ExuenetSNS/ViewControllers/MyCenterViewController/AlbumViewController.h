@@ -16,5 +16,6 @@
     PullingRefreshTableView *albumTable;
     NSMutableArray *albumArray;
     NSInteger requestPage;
+    AlbumHeaderView *headerView;
 }
 @end

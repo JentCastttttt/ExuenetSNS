@@ -48,6 +48,7 @@
 		9E783D7B1A7F62460050311D /* ClassmatesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E783D7A1A7F62460050311D /* ClassmatesCell.m */; };
 		9E783D7D1A7F6A3A0050311D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E783D7C1A7F6A3A0050311D /* 1.png */; };
 		9E783D7F1A7F6A9F0050311D /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E783D7E1A7F6A9F0050311D /* 2.png */; };
+		9E878FB01A83484B00C07647 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E878FAF1A83484B00C07647 /* AVFoundation.framework */; };
 		9EC1AC811A8055110032AC7D /* HeaderInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1AC801A8055110032AC7D /* HeaderInfoView.m */; };
 		9EC5C4621A7B150B00FEEE10 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C4611A7B150B00FEEE10 /* WelcomeViewController.m */; };
 		9EC5C4651A7B17D600FEEE10 /* DiscGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C4641A7B17D600FEEE10 /* DiscGroupViewController.m */; };
@@ -169,6 +170,7 @@
 		9E783D7A1A7F62460050311D /* ClassmatesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassmatesCell.m; sourceTree = "<group>"; };
 		9E783D7C1A7F6A3A0050311D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		9E783D7E1A7F6A9F0050311D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		9E878FAF1A83484B00C07647 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9EC1AC7F1A8055110032AC7D /* HeaderInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderInfoView.h; sourceTree = "<group>"; };
 		9EC1AC801A8055110032AC7D /* HeaderInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderInfoView.m; sourceTree = "<group>"; };
 		9EC5C4601A7B150B00FEEE10 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E878FB01A83484B00C07647 /* AVFoundation.framework in Frameworks */,
 				9E0ACB2E1A7A29C50038E158 /* libz.dylib in Frameworks */,
 				9E0ACB2C1A7A29BB0038E158 /* SystemConfiguration.framework in Frameworks */,
 				9E0ACB2A1A7A29B20038E158 /* Security.framework in Frameworks */,
@@ -670,6 +673,7 @@
 				9E0ACB291A7A29B20038E158 /* Security.framework */,
 				9ED70C5C1A78C59300884C0A /* CoreGraphics.framework */,
 				9ED70C5A1A78C58A00884C0A /* CoreTelephony.framework */,
+				9E878FAF1A83484B00C07647 /* AVFoundation.framework */,
 			);
 			name = Framework;
 			path = ExuenetSNS;

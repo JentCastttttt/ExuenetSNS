@@ -23,6 +23,7 @@
     albumTable.showsVerticalScrollIndicator = NO;
     albumTable.delegate = self;
     albumTable.dataSource = self;
+    albumTable.headerOnly = YES;
     albumTable.backgroundColor = [UIColor colorWithRed:0.48 green:0.31 blue:0.65 alpha:1];
     albumTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:albumTable];
@@ -30,6 +31,24 @@
     
     albumArray = [[NSMutableArray alloc] init];
     requestPage = 1;
+    
+    headerView = [[AlbumHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 300)];
+    albumTable.tableHeaderView = headerView;
+    
+    [headerView examineAlbumWithCompletion:^(UIImage *icon) {
+        NSLog(@"查看头像");
+        [headerView.avatarView setImage:[UIImage imageNamed:@"1.png"]];
+    }];
+    
+    [headerView changeAlbumWithCompletion:^{
+        NSLog(@"查看头像");
+    }];
+    
+    [headerView requestAlbumPhotoWithCompletion:^{
+        NSLog(@"发送状态和相册照片");
+    }];
+    
+    [headerView release];
 }
 
 #pragma mark - 上拉下拉刷新代理
@@ -98,22 +117,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifier = @"identifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    AlbumCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.backgroundColor = [UIColor colorWithRed:0.48 green:0.31 blue:0.65 alpha:1];
-        cell.selectedBackgroundView = [[[UIView alloc] initWithFrame:cell.frame] autorelease];
-        cell.detailTextLabel.textColor = [UIColor whiteColor];
-        cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0.53 green:0.38 blue:0.68 alpha:1];
-        
-        UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 43.0, kScreenWidth, 1.0)];
-        img.backgroundColor = [UIColor colorWithRed:0.45 green:0.28 blue:0.61 alpha:1];
-        [cell addSubview:img];
-        [img release];
-        
+        cell = [[[AlbumCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier] autorelease];
     }
-    cell.detailTextLabel.text = @"123";
     return cell;
 }
 

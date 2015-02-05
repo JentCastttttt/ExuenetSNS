@@ -10,8 +10,9 @@
 #import "ModifyViewCell.h"
 #import "HeadIconCell.h"
 #import "UIRegionPickerView.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface ModifierViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate,QBImagePickerControllerDelegate>
+@interface ModifierViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate,QBImagePickerControllerDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 {
     UITableView *infoTable;
     NSArray *titleArray;

@@ -8,9 +8,6 @@
 
 #import "ModifierViewController.h"
 
-#define Album_Sheet  1000
-#define Sex_Sheet    1001
-
 
 @interface ModifierViewController ()
 
@@ -172,6 +169,15 @@
 {
     if (actionSheet.tag == Album_Sheet) {
         if (buttonIndex == 0) {
+            
+            if([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusAuthorized || [ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusNotDetermined){
+    
+            } else {
+                NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+                [Utility showAlertMessage:[NSString stringWithFormat:@"您相册获取权限受限，请通过“设置->隐私->照片”中开启%@的权限。",[info objectForKey:@"CFBundleName"]]];
+                return ;
+            }
+            
             QBImagePickerController *imagePickerController = [[QBImagePickerController alloc] init];
             imagePickerController.delegate = self;
             imagePickerController.allowsMultipleSelection = NO;
@@ -185,6 +191,25 @@
             [navigationController release];
         } else if (buttonIndex == 1) {
             
+            if([AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo] == ALAuthorizationStatusRestricted
+               ||[AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo] == ALAuthorizationStatusDenied){
+                NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+                [Utility showAlertMessage:[NSString stringWithFormat:@"您相机获取权限受限，请通过“设置->隐私->相机”中开启%@的权限。",[info objectForKey:@"CFBundleName"]]];
+                return;
+            }
+            
+            UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+            picker.allowsEditing = YES;
+            picker.delegate = self;
+            if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+                picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            }else{
+                [Utility showAlertMessage:@"当前设备无法打开相机"];
+            }
+            [self presentViewController:picker animated:YES completion:^{
+                [UIApplication sharedApplication].statusBarHidden = YES;
+            }];
+            [picker release];
         }
     } else if (actionSheet.tag == Sex_Sheet) {
         if (buttonIndex == 0) {
@@ -200,29 +225,75 @@
 
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [UIApplication sharedApplication].statusBarHidden = NO;
+    }];
+}
 
 #pragma mark - QBImagePickerControllerDelegate
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didFinishPickingMediaWithInfo:(id)info
 {
-    if(imagePickerController.allowsMultipleSelection) {
-        NSArray *mediaInfoArray = (NSArray *)info;
-        [self dismissViewControllerAnimated:YES completion:^{
-            NSLog(@"%@",mediaInfoArray);
-        }];
-        NSLog(@"Selected %ld photos and mediaInfoArray==%@", mediaInfoArray.count,mediaInfoArray);
+    NSLog(@"%@",NSStringFromClass([imagePickerController class]));
+    if ([imagePickerController isMemberOfClass:[UIImagePickerController class]]) {
+        [UIApplication sharedApplication].statusBarHidden = NO;
+        NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+        if ([mediaType isEqualToString:@"public.image"]){
+            //切忌不可直接使用originImage，因为这是没有经过格式化的图片数据，可能会导致选择的图片颠倒或是失真等现象的发生，从UIImagePickerControllerOriginalImage中的Origin可以看出，很原始，哈哈
+            UIImage *originImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+            //图片压缩，因为原图都是很大的，不必要传原图
+            UIImage *scaleImage = [self scaleImage:originImage toScale:0.3];
+            NSData *data = nil;
+            //以下这两步都是比较耗时的操作，最好开一个HUD提示用户，这样体验会好些，不至于阻塞界面
+            if (UIImagePNGRepresentation(scaleImage) == nil) {
+                data = UIImageJPEGRepresentation(scaleImage, 1);  //将图片转换为JPG格式的二进制数据
+            } else {
+                data = UIImagePNGRepresentation(scaleImage);  //将图片转换为PNG格式的二进制数据
+            }
+            //将二进制数据生成UIImage
+            if (pickerImage) {
+                [pickerImage release];
+                pickerImage = nil;
+            }
+            pickerImage = [[UIImage imageWithData:data] retain];
+            [self dismissViewControllerAnimated:YES completion:^{
+                NSIndexPath *iconPath = [NSIndexPath indexPathForRow:0 inSection:0];
+                [infoTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:iconPath] withRowAnimation:UITableViewRowAnimationNone];
+            }];
+        }
+        NSLog(@"%@",@"uiimage");
     } else {
-        NSDictionary *mediaInfo = (NSDictionary *)info;
-        
-        [pickerImage release];
-        pickerImage = nil;
-        pickerImage = [[mediaInfo objectForKey:@"UIImagePickerControllerOriginalImage"] retain];
-        
-        [self dismissViewControllerAnimated:YES completion:^{
+        if(imagePickerController.allowsMultipleSelection) {
+            NSArray *mediaInfoArray = (NSArray *)info;
+            [self dismissViewControllerAnimated:YES completion:^{
+                NSLog(@"%@",mediaInfoArray);
+            }];
+            NSLog(@"Selected %ld photos and mediaInfoArray==%@", mediaInfoArray.count,mediaInfoArray);
+        } else {
+            NSDictionary *mediaInfo = (NSDictionary *)info;
             
-            NSIndexPath *iconPath = [NSIndexPath indexPathForRow:0 inSection:0];
-            [infoTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:iconPath] withRowAnimation:UITableViewRowAnimationNone];
-        }];
+            [pickerImage release];
+            pickerImage = nil;
+            pickerImage = [[mediaInfo objectForKey:@"UIImagePickerControllerOriginalImage"] retain];
+            
+            [self dismissViewControllerAnimated:YES completion:^{
+                
+                NSIndexPath *iconPath = [NSIndexPath indexPathForRow:0 inSection:0];
+                [infoTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:iconPath] withRowAnimation:UITableViewRowAnimationNone];
+            }];
+        }
     }
+}
+
+//TODO:缩放图片
+-(UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize
+{
+    UIGraphicsBeginImageContext(CGSizeMake(image.size.width*scaleSize,image.size.height*scaleSize));
+    [image drawInRect:CGRectMake(0, 0, image.size.width * scaleSize, image.size.height *scaleSize)];
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return scaledImage;
 }
 
 - (void)didReceiveMemoryWarning {

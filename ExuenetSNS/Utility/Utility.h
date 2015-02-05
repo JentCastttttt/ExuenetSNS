@@ -24,4 +24,6 @@
 
 + (NSMutableDictionary *)readFileToDictionaryFromPath:(NSString *)path;
 
++ (void)showAlertMessage:(NSString *)msg;
+
 @end

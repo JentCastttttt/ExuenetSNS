@@ -71,4 +71,24 @@
     return obj;
 }
 
+/*!
+ *  显示警告提示框
+ *
+ *  @param msg 提示语
+ */
++ (void)showAlertMessage:(NSString *)msg
+{
+    if (![msg isKindOfClass:[NSString class]]) {
+        return ;
+    }
+    
+    if ([msg length] == 0) {
+        return ;
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:msg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+    [alert show];
+    [alert release];
+}
+
 @end

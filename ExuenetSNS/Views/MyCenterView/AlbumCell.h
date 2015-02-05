@@ -10,5 +10,12 @@
 #import <UIKit/UIKit.h>
 
 @interface AlbumCell : UITableViewCell
-
+{
+    UILabel *dateLabel;
+    UIImageView *borderView;
+    UILabel *contentLabel;
+}
+@property (nonatomic, retain) UILabel *dateLabel;
+@property (nonatomic, retain) UIImageView *borderView;
+@property (nonatomic, retain) UILabel *contentLabel;
 @end
