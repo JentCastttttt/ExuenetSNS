@@ -19,6 +19,7 @@
 
 #import "UIColor+extends.h"
 #import "UIView+WhenTappedBlocks.h"
+#import "NSString+extension.h"
 
 //当前程序版本号
 #define KBundleVersion @"BundleVersion"

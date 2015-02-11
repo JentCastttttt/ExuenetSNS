@@ -65,29 +65,8 @@
     
     // Reload
     [self reloadData];
-//    if (!isIOS7) {
-//        if(self.fullScreenLayoutEnabled) {
-//            // Set bar styles
-//            self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-//            self.navigationController.navigationBar.translucent = YES;
-//            //取消无效代码
-////            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:NO];
-//            
-//            CGFloat top = 0;
-//            if(![[UIApplication sharedApplication] isStatusBarHidden]) top = top + 20;
-//            if(!self.navigationController.navigationBarHidden) top = top + 44;
-//            self.tableView.contentInset = UIEdgeInsetsMake(top, 0, 0, 0);
-//            self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(top, 0, 0, 0);
-//            
-//            //取消无效代码
-////            [self setWantsFullScreenLayout:YES];
-//        }
-//    }
-       NSLog(@"调转到什么位置===%f",self.tableView.contentSize.height);
+    NSLog(@"调转到什么位置===%f",self.tableView.contentSize.height);
     // Scroll to bottom
-//    if (!isIOS7) {
-//        [self.tableView setContentOffset:CGPointMake(0, self.tableView.contentSize.height) animated:NO];
-//    }
 }
 
 - (void)viewDidAppear:(BOOL)animated

@@ -15,7 +15,8 @@
 - (id)init
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         frame = [self CGRectForOrientation];
         
         view = [[UIView alloc] initWithFrame:frame];
@@ -49,7 +50,6 @@
     if (self) {
         contentView.image = image;
         [self setImageSize:image.size];
-        
     }
     return self;
 }
@@ -67,7 +67,7 @@
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
             [contentView setImage:failImage];
         }];
-//        [contentView setImageWithURL:[NSURL URLWithString:[imageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+//        [contentView setImageWithURL:[NSURL URLWithString:[self.imageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
     }
     return self;
 }
@@ -90,8 +90,7 @@
             }
         }];
         
-        
-        [contentView setImageWithURL:[NSURL URLWithString:[imageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] placeholderImage:placeholderImage];
+        [contentView setImageWithURL:[NSURL URLWithString:[self.imageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] placeholderImage:placeholderImage];
     }
     return self;
 }

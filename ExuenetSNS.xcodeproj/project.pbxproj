@@ -24,6 +24,7 @@
 		9E2A1AD91A81C8E70004D328 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2A1AD31A81C8E70004D328 /* blueArrowDown.png */; };
 		9E2A1ADA1A81C8E70004D328 /* blueArrowDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2A1AD41A81C8E70004D328 /* blueArrowDown@2x.png */; };
 		9E2A1ADB1A81C8E70004D328 /* PullingRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A1AD61A81C8E70004D328 /* PullingRefreshTableView.m */; };
+		9E3557121A8B052100C58839 /* NSString+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3557111A8B052100C58839 /* NSString+extension.m */; };
 		9E4E47451A8093D5003116F0 /* ModifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E47441A8093D5003116F0 /* ModifierViewController.m */; };
 		9E4E47471A80A67A003116F0 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E47461A80A67A003116F0 /* 3.png */; };
 		9E4E474A1A80A827003116F0 /* ModifyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E47491A80A827003116F0 /* ModifyViewCell.m */; };
@@ -123,6 +124,8 @@
 		9E2A1AD41A81C8E70004D328 /* blueArrowDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrowDown@2x.png"; sourceTree = "<group>"; };
 		9E2A1AD51A81C8E70004D328 /* PullingRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullingRefreshTableView.h; sourceTree = "<group>"; };
 		9E2A1AD61A81C8E70004D328 /* PullingRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullingRefreshTableView.m; sourceTree = "<group>"; };
+		9E3557101A8B052100C58839 /* NSString+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+extension.h"; sourceTree = "<group>"; };
+		9E3557111A8B052100C58839 /* NSString+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+extension.m"; sourceTree = "<group>"; };
 		9E4E47431A8093D5003116F0 /* ModifierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifierViewController.h; sourceTree = "<group>"; };
 		9E4E47441A8093D5003116F0 /* ModifierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifierViewController.m; sourceTree = "<group>"; };
 		9E4E47461A80A67A003116F0 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
@@ -544,6 +547,8 @@
 				9ED70C091A78A0A800884C0A /* UIColor+extends.m */,
 				9E2A1ACD1A81C3640004D328 /* UIView+WhenTappedBlocks.h */,
 				9E2A1ACE1A81C3640004D328 /* UIView+WhenTappedBlocks.m */,
+				9E3557101A8B052100C58839 /* NSString+extension.h */,
+				9E3557111A8B052100C58839 /* NSString+extension.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -795,6 +800,7 @@
 				9E4E47861A80B95D003116F0 /* QBImagePickerFooterView.m in Sources */,
 				9E1930DC1A7B7F90006304C7 /* ForgorPasswordView.m in Sources */,
 				9E4E47871A80B95D003116F0 /* QBImagePickerGroupCell.m in Sources */,
+				9E3557121A8B052100C58839 /* NSString+extension.m in Sources */,
 				9ED70C371A78C4D800884C0A /* AFHTTPSessionManager.m in Sources */,
 				9E4E47981A80C554003116F0 /* LocationModel.m in Sources */,
 				9ED70C501A78C4E400884C0A /* UIActivityIndicatorView+AFNetworking.m in Sources */,

@@ -12,6 +12,7 @@
 #import "CollectionCell.h"
 #import "ClassmatesCell.h"
 #import "CollectionHeaderView.h"
+#import "UserModel.h"
 
 #define ROW_NUMBER  4.0  //每一列的个数
 
@@ -40,6 +41,21 @@
     [self.view addSubview:waterView];
     [layout release];
     [waterView release];
+    
+    
+    NSMutableString *ms = [[NSMutableString alloc] initWithString:@"我是中国人曹建荣"];
+    if (CFStringTransform((__bridge CFMutableStringRef)ms, 0, kCFStringTransformMandarinLatin, NO)) {
+        NSLog(@"Pingying: %@", ms); // wǒ shì zhōng guó rén
+    }
+    if (CFStringTransform((__bridge CFMutableStringRef)ms, 0, kCFStringTransformStripDiacritics, NO)) {
+        NSLog(@"Pingying: %@", ms); // wo shi zhong guo ren
+    }
+    
+    NSDictionary *dic = @{@"name":@"valueName",@"icon":@"http://www.baidu.com"};
+    UserModel *model = [[UserModel alloc] init];
+    NSLog(@"%@",model);
+    [Utility instantiationProperty:model withDictionary:dic];
+    NSLog(@"%@",model);
 }
 
 /**
