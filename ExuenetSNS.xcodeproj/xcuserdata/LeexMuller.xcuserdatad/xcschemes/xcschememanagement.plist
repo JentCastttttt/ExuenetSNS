@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ExuenetToday.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>44BBF4EE1ACD655A001DEC7A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9ED70BB41A789B1B00884C0A</key>
 		<dict>
 			<key>primary</key>

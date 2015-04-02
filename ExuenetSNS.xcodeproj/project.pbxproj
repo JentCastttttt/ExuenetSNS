@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44BBF4F21ACD655A001DEC7A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BBF4F11ACD655A001DEC7A /* NotificationCenter.framework */; };
+		44BBF4F81ACD655A001DEC7A /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BBF4F71ACD655A001DEC7A /* TodayViewController.m */; };
+		44BBF4FD1ACD655A001DEC7A /* 爪爪社区.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 44BBF4EF1ACD655A001DEC7A /* 爪爪社区.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9E0ACB2A1A7A29B20038E158 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0ACB291A7A29B20038E158 /* Security.framework */; };
 		9E0ACB2C1A7A29BB0038E158 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0ACB2B1A7A29BB0038E158 /* SystemConfiguration.framework */; };
 		9E0ACB2E1A7A29C50038E158 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0ACB2D1A7A29C50038E158 /* libz.dylib */; };
@@ -101,7 +104,36 @@
 		9ED70C661A78C6E900884C0A /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED70C651A78C6E900884C0A /* Utility.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		44BBF4FB1ACD655A001DEC7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ED70BAD1A789B1B00884C0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44BBF4EE1ACD655A001DEC7A;
+			remoteInfo = ExuenetToday;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		44BBF5011ACD655A001DEC7A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				44BBF4FD1ACD655A001DEC7A /* 爪爪社区.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		44BBF4EF1ACD655A001DEC7A /* 爪爪社区.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "爪爪社区.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44BBF4F11ACD655A001DEC7A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		44BBF4F51ACD655A001DEC7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44BBF4F61ACD655A001DEC7A /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		44BBF4F71ACD655A001DEC7A /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		9E0ACB291A7A29B20038E158 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9E0ACB2B1A7A29BB0038E158 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9E0ACB2D1A7A29C50038E158 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -272,6 +304,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		44BBF4EC1ACD655A001DEC7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44BBF4F21ACD655A001DEC7A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9ED70BB21A789B1B00884C0A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,6 +328,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44BBF4F01ACD655A001DEC7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44BBF4F11ACD655A001DEC7A /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44BBF4F31ACD655A001DEC7A /* ExuenetToday */ = {
+			isa = PBXGroup;
+			children = (
+				44BBF4F61ACD655A001DEC7A /* TodayViewController.h */,
+				44BBF4F71ACD655A001DEC7A /* TodayViewController.m */,
+				44BBF4F41ACD655A001DEC7A /* Supporting Files */,
+			);
+			path = ExuenetToday;
+			sourceTree = "<group>";
+		};
+		44BBF4F41ACD655A001DEC7A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44BBF4F51ACD655A001DEC7A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		9E1930C91A7B6719006304C7 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +552,8 @@
 			children = (
 				9ED70BB71A789B1B00884C0A /* ExuenetSNS */,
 				9ED70C5E1A78C5C500884C0A /* Framework */,
+				44BBF4F31ACD655A001DEC7A /* ExuenetToday */,
+				44BBF4F01ACD655A001DEC7A /* Frameworks */,
 				9ED70BB61A789B1B00884C0A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -494,6 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				9ED70BB51A789B1B00884C0A /* 爪爪社区.app */,
+				44BBF4EF1ACD655A001DEC7A /* 爪爪社区.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -702,6 +771,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		44BBF4EE1ACD655A001DEC7A /* ExuenetToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44BBF5001ACD655A001DEC7A /* Build configuration list for PBXNativeTarget "ExuenetToday" */;
+			buildPhases = (
+				44BBF4EB1ACD655A001DEC7A /* Sources */,
+				44BBF4EC1ACD655A001DEC7A /* Frameworks */,
+				44BBF4ED1ACD655A001DEC7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExuenetToday;
+			productName = ExuenetToday;
+			productReference = 44BBF4EF1ACD655A001DEC7A /* 爪爪社区.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9ED70BB41A789B1B00884C0A /* ExuenetSNS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9ED70BD81A789B1C00884C0A /* Build configuration list for PBXNativeTarget "ExuenetSNS" */;
@@ -709,10 +795,12 @@
 				9ED70BB11A789B1B00884C0A /* Sources */,
 				9ED70BB21A789B1B00884C0A /* Frameworks */,
 				9ED70BB31A789B1B00884C0A /* Resources */,
+				44BBF5011ACD655A001DEC7A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				44BBF4FC1ACD655A001DEC7A /* PBXTargetDependency */,
 			);
 			name = ExuenetSNS;
 			productName = ExuenetSNS;
@@ -728,6 +816,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Cao JianRong";
 				TargetAttributes = {
+					44BBF4EE1ACD655A001DEC7A = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					9ED70BB41A789B1B00884C0A = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -748,11 +839,19 @@
 			projectRoot = "";
 			targets = (
 				9ED70BB41A789B1B00884C0A /* ExuenetSNS */,
+				44BBF4EE1ACD655A001DEC7A /* ExuenetToday */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		44BBF4ED1ACD655A001DEC7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9ED70BB31A789B1B00884C0A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -787,6 +886,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		44BBF4EB1ACD655A001DEC7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44BBF4F81ACD655A001DEC7A /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9ED70BB11A789B1B00884C0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -858,6 +965,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		44BBF4FC1ACD655A001DEC7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44BBF4EE1ACD655A001DEC7A /* ExuenetToday */;
+			targetProxy = 44BBF4FB1ACD655A001DEC7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9ED70BF51A789F8200884C0A /* infoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -883,6 +998,35 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		44BBF4FE1ACD655A001DEC7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: JIN QI (A94XXBU278)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ExuenetToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "爪爪社区";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		44BBF4FF1ACD655A001DEC7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: JIN QI (A94XXBU278)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = ExuenetToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "爪爪社区";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		9ED70BD61A789B1C00884C0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1006,6 +1150,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		44BBF5001ACD655A001DEC7A /* Build configuration list for PBXNativeTarget "ExuenetToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44BBF4FE1ACD655A001DEC7A /* Debug */,
+				44BBF4FF1ACD655A001DEC7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		9ED70BB01A789B1B00884C0A /* Build configuration list for PBXProject "ExuenetSNS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
