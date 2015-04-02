@@ -41,7 +41,7 @@
     }];
     
     [headerView changeAlbumWithCompletion:^{
-        NSLog(@"查看头像");
+        NSLog(@"修改头像");
     }];
     
     [headerView requestAlbumPhotoWithCompletion:^{

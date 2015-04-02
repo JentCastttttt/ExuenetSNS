@@ -28,7 +28,7 @@
     self.backgroundColor = [UIColor colorWithRed:0.48 green:0.31 blue:0.65 alpha:1];
     
     UIImageView *bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kAlbumHeight)];
-    [bgView setImage:[UIImage imageNamed:@"Default"]];
+    [bgView setImage:[UIImage imageNamed:@"Default-480h"]];
     [bgView whenTapped:^{
         albumClickBlock block = [albumBlock retain];
         if (block) {
@@ -40,24 +40,24 @@
     [self addSubview:bgView];
     [bgView release];
     
-    bgView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth - 75.0, kAlbumHeight - 35.0, 70.0, 70.0f)];
-    [bgView setImage:[UIImage imageNamed:@"Default"]];
-    bgView.layer.cornerRadius = bgView.frame.size.height/2.0;
-    bgView.layer.borderWidth = 4.0f;
-    bgView.layer.borderColor = [UIColor colorWithRed:0.43 green:0.27 blue:0.6 alpha:1].CGColor;
-    bgView.clipsToBounds = YES;
-    self.avatarView = bgView;
-    [bgView whenTapped:^{
+    UIImageView *bgView1 = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth - 75.0, kAlbumHeight - 35.0, 70.0, 70.0f)];
+    [bgView1 setImage:[UIImage imageNamed:@"Default-480h"]];
+    bgView1.layer.cornerRadius = bgView1.frame.size.height/2.0;
+    bgView1.layer.borderWidth = 4.0f;
+    bgView1.layer.borderColor = [UIColor colorWithRed:0.43 green:0.27 blue:0.6 alpha:1].CGColor;
+    bgView1.clipsToBounds = YES;
+    self.avatarView = bgView1;
+    [bgView1 whenTapped:^{
         avatarClickBlock block = [avatarBlock retain];
         if (block) {
             block(self.avatarView.image);
         }
         [block release];
     }];
-    [self addSubview:bgView];
-    [bgView release];
+    [self addSubview:bgView1];
+    [bgView1 release];
     
-    UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(0, kAlbumHeight - 15, kScreenWidth - bgView.frame.size.width - 5.0, 15.0)];
+    UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(0, kAlbumHeight - 15, kScreenWidth - bgView1.frame.size.width - 5.0, 15.0)];
     name.textColor = [UIColor blackColor];
     name.textAlignment = NSTextAlignmentRight;
     name.backgroundColor = [UIColor clearColor];
@@ -67,7 +67,7 @@
     [self addSubview:name];
     [name release];
     
-    name = [[UILabel alloc] initWithFrame:CGRectMake(10, bgView.frame.origin.y + bgView.frame.size.height, 45, 19.0)];
+    name = [[UILabel alloc] initWithFrame:CGRectMake(10, bgView1.frame.origin.y + bgView1.frame.size.height, 45, 19.0)];
     name.textColor = [UIColor blackColor];
     name.textAlignment = NSTextAlignmentRight;
     name.backgroundColor = [UIColor redColor];

@@ -29,7 +29,16 @@
     
     UIImageView *defaultImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     defaultImage.contentMode = UIViewContentModeScaleAspectFill;
-    [defaultImage setImage:[UIImage imageNamed:@"Default"]];
+    [defaultImage setImage:[UIImage imageNamed:@"Default-568h"]];
+    if(kScreenHeight == 480.0) {
+        [defaultImage setImage:[UIImage imageNamed:@"Default"]];
+    } else if (kScreenHeight == 568.0) {
+        [defaultImage setImage:[UIImage imageNamed:@"Default-568h"]];
+    } else if (kScreenHeight == 667.0) {
+        [defaultImage setImage:[UIImage imageNamed:@"Default-667h"]];
+    } else if (kScreenHeight == 736.0) {
+        [defaultImage setImage:[UIImage imageNamed:@"Default-736h"]];
+    }
     [self.view addSubview:defaultImage];
     [defaultImage release];
 }
