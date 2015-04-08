@@ -223,7 +223,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"self.assetsGroups.count==%d",self.assetsGroups.count);
+    NSLog(@"self.assetsGroups.count==%ld",self.assetsGroups.count);
     return self.assetsGroups.count;
 }
 
@@ -241,7 +241,7 @@
 
     cell.iconView.image = [UIImage imageWithCGImage:assetsGroup.posterImage];
     cell.titleLabel.text = [NSString stringWithFormat:@"%@", [assetsGroup valueForProperty:ALAssetsGroupPropertyName]];
-    cell.countLabel.text = [NSString stringWithFormat:@"(%d)", assetsGroup.numberOfAssets];
+    cell.countLabel.text = [NSString stringWithFormat:@"(%ld)", assetsGroup.numberOfAssets];
 
     return cell;
 }

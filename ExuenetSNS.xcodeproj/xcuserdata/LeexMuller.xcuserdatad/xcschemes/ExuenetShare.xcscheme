@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44BBF4EE1ACD655A001DEC7A"
-               BuildableName = "&#x722a;&#x722a;&#x793e;&#x533a;.appex"
-               BlueprintName = "ExuenetToday"
+               BlueprintIdentifier = "9EB95C041AD51F6200BD0595"
+               BuildableName = "ExuenetShare.appex"
+               BlueprintName = "ExuenetShare"
                ReferencedContainer = "container:ExuenetSNS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44BBF4EE1ACD655A001DEC7A"
-            BuildableName = "&#x722a;&#x722a;&#x793e;&#x533a;.appex"
-            BlueprintName = "ExuenetToday"
+            BlueprintIdentifier = "9EB95C041AD51F6200BD0595"
+            BuildableName = "ExuenetShare.appex"
+            BlueprintName = "ExuenetShare"
             ReferencedContainer = "container:ExuenetSNS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -60,13 +60,13 @@
         NSInteger min = self.duration / 60.0;
         NSInteger sec = self.duration - 60 * min;
         
-        self.durationLabel.text = [NSString stringWithFormat:@"%d:%02d", min, sec];
+        self.durationLabel.text = [NSString stringWithFormat:@"%ld:%02ld", min, sec];
     } else if(60 * 60 <= self.duration && self.duration < 60 * 60 * 60) {
         NSInteger hour = self.duration / (60.0 * 60.0);
         NSInteger min = (self.duration - (60.0 * 60.0) * hour) / 60.0;
         NSInteger sec = self.duration - (60.0 * 60.0) * hour - (60 * min);
         
-        self.durationLabel.text = [NSString stringWithFormat:@"%d:%02d:%02d", hour, min, sec];
+        self.durationLabel.text = [NSString stringWithFormat:@"%ld:%02ld:%02ld", hour, min, sec];
     }
 }
 

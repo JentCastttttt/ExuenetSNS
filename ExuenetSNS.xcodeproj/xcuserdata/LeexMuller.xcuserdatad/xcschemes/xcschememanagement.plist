@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ExuenetShare.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>ExuenetToday.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>44BBF4EE1ACD655A001DEC7A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EB95C041AD51F6200BD0595</key>
 		<dict>
 			<key>primary</key>
 			<true/>

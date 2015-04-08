@@ -212,9 +212,9 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit
                                                fromDate:date toDate:[NSDate date] options:0];
-    int year = [components year];
-    int month = [components month];
-    int day = [components day];
+    NSInteger year = [components year];
+    NSInteger month = [components month];
+    NSInteger day = [components day];
     if (year == 0 && month == 0 && day < 3) {
         if (day == 0) {
             title = NSLocalizedString(@"今天",nil);

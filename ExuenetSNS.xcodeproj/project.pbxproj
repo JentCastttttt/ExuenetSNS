@@ -1123,7 +1123,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "ExuenetSNS/爪爪社区.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: JIN QI (A94XXBU278)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1133,7 +1133,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "爪爪社区";
-				PROVISIONING_PROFILE = "a727716a-f94e-4471-8003-b9bf708197a8";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1142,14 +1142,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "ExuenetSNS/爪爪社区.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: JIN QI (A94XXBU278)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = ExuenetToday/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "爪爪社区";
-				PROVISIONING_PROFILE = "a727716a-f94e-4471-8003-b9bf708197a8";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1328,6 +1328,7 @@
 				9EB95C131AD51F6300BD0595 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9ED70BB01A789B1B00884C0A /* Build configuration list for PBXProject "ExuenetSNS" */ = {
 			isa = XCConfigurationList;

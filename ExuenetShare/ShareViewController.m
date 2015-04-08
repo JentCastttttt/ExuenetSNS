@@ -40,7 +40,7 @@
 {
     NSExtensionItem *item = [self.extensionContext.inputItems firstObject];
     
-    NSLog(@"%d",[self.extensionContext.inputItems count]);
+    NSLog(@"%ld",[self.extensionContext.inputItems count]);
     
     NSArray *attatch = [item attachments];
     
@@ -50,7 +50,7 @@
     {
         NSLog(@"xxxxxxxx");
         [itemProvider loadItemForTypeIdentifier:(NSString*)kUTTypeURL options:nil completionHandler:^(NSURL* imageUrl, NSError *error) {
-            NSLog(@"xxxxxxx123 = %@",imageUrl.absoluteString); //获取分享的URL
+            NSLog(@"share url = %@",imageUrl.absoluteString); //获取分享的URL
             urlString = imageUrl.absoluteString;
             NSLog(@"%@---%@",urlString,self.contentText);
         }];
@@ -75,7 +75,7 @@
     // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
     NSArray *itemArray = [NSArray arrayWithArray:self.extensionContext.inputItems];
     
-    NSLog(@"%d",[self.extensionContext.inputItems count]);
+    NSLog(@"%ld",[self.extensionContext.inputItems count]);
     
     NSExtensionItem *item = [itemArray firstObject];
     
