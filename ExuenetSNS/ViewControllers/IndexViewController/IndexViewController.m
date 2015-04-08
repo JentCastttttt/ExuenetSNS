@@ -56,6 +56,15 @@
     NSLog(@"%@",model);
     [Utility instantiationProperty:model withDictionary:dic];
     NSLog(@"%@",model);
+    
+    NSUserDefaults *userDefault = [[NSUserDefaults alloc] initWithSuiteName:k_APP_GROUP_KEY];
+    [userDefault setObject:@{@"1234key":@"value1234"} forKey:@"123"];
+    [userDefault setObject:@"Jim" forKey:@"name"];
+    NSInteger count = [[userDefault objectForKey:@"number"] integerValue];
+    count ++ ;
+    [userDefault setObject:[NSNumber numberWithInteger:count] forKey:@"number"];
+    [userDefault synchronize];
+    
 }
 
 /**

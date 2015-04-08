@@ -39,6 +39,9 @@
 		9E2A1ADA1A81C8E70004D328 /* blueArrowDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2A1AD41A81C8E70004D328 /* blueArrowDown@2x.png */; };
 		9E2A1ADB1A81C8E70004D328 /* PullingRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A1AD61A81C8E70004D328 /* PullingRefreshTableView.m */; };
 		9E3557121A8B052100C58839 /* NSString+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3557111A8B052100C58839 /* NSString+extension.m */; };
+		9E3BDA651AD4FEC9005492AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3BDA641AD4FEC9005492AB /* CoreLocation.framework */; };
+		9E3BDA661AD4FED5005492AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3BDA641AD4FEC9005492AB /* CoreLocation.framework */; };
+		9E3BDA6B1AD507E4005492AB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3BDA6A1AD507E4005492AB /* MobileCoreServices.framework */; };
 		9E4E47451A8093D5003116F0 /* ModifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E47441A8093D5003116F0 /* ModifierViewController.m */; };
 		9E4E47471A80A67A003116F0 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E4E47461A80A67A003116F0 /* 3.png */; };
 		9E4E474A1A80A827003116F0 /* ModifyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E47491A80A827003116F0 /* ModifyViewCell.m */; };
@@ -64,6 +67,10 @@
 		9E783D7D1A7F6A3A0050311D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E783D7C1A7F6A3A0050311D /* 1.png */; };
 		9E783D7F1A7F6A9F0050311D /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E783D7E1A7F6A9F0050311D /* 2.png */; };
 		9E878FB01A83484B00C07647 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E878FAF1A83484B00C07647 /* AVFoundation.framework */; };
+		9EB95C0B1AD51F6200BD0595 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB95C0A1AD51F6200BD0595 /* ShareViewController.m */; };
+		9EB95C101AD51F6200BD0595 /* ExuenetShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9EB95C051AD51F6200BD0595 /* ExuenetShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9EB95C141AD5202F00BD0595 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3BDA6A1AD507E4005492AB /* MobileCoreServices.framework */; };
+		9EB95C171AD5298E00BD0595 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB95C161AD5298E00BD0595 /* ListViewController.m */; };
 		9EC1AC811A8055110032AC7D /* HeaderInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1AC801A8055110032AC7D /* HeaderInfoView.m */; };
 		9EC5C4621A7B150B00FEEE10 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C4611A7B150B00FEEE10 /* WelcomeViewController.m */; };
 		9EC5C4651A7B17D600FEEE10 /* DiscGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C4641A7B17D600FEEE10 /* DiscGroupViewController.m */; };
@@ -112,6 +119,13 @@
 			remoteGlobalIDString = 44BBF4EE1ACD655A001DEC7A;
 			remoteInfo = ExuenetToday;
 		};
+		9EB95C0E1AD51F6200BD0595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ED70BAD1A789B1B00884C0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EB95C041AD51F6200BD0595;
+			remoteInfo = ExuenetShare;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,6 +136,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				44BBF4FD1ACD655A001DEC7A /* 爪爪社区.appex in Embed App Extensions */,
+				9EB95C101AD51F6200BD0595 /* ExuenetShare.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +189,9 @@
 		9E2A1AD61A81C8E70004D328 /* PullingRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullingRefreshTableView.m; sourceTree = "<group>"; };
 		9E3557101A8B052100C58839 /* NSString+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+extension.h"; sourceTree = "<group>"; };
 		9E3557111A8B052100C58839 /* NSString+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+extension.m"; sourceTree = "<group>"; };
+		9E3BDA611AD4BFAC005492AB /* 爪爪社区.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "爪爪社区.entitlements"; sourceTree = "<group>"; };
+		9E3BDA641AD4FEC9005492AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9E3BDA6A1AD507E4005492AB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9E4E47431A8093D5003116F0 /* ModifierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifierViewController.h; sourceTree = "<group>"; };
 		9E4E47441A8093D5003116F0 /* ModifierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifierViewController.m; sourceTree = "<group>"; };
 		9E4E47461A80A67A003116F0 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
@@ -222,6 +240,13 @@
 		9E783D7C1A7F6A3A0050311D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		9E783D7E1A7F6A9F0050311D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		9E878FAF1A83484B00C07647 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9EB95BFF1AD51DD400BD0595 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9EB95C051AD51F6200BD0595 /* ExuenetShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ExuenetShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB95C081AD51F6200BD0595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EB95C091AD51F6200BD0595 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		9EB95C0A1AD51F6200BD0595 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		9EB95C151AD5298E00BD0595 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		9EB95C161AD5298E00BD0595 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		9EC1AC7F1A8055110032AC7D /* HeaderInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderInfoView.h; sourceTree = "<group>"; };
 		9EC1AC801A8055110032AC7D /* HeaderInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderInfoView.m; sourceTree = "<group>"; };
 		9EC5C4601A7B150B00FEEE10 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
@@ -308,7 +333,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3BDA6B1AD507E4005492AB /* MobileCoreServices.framework in Frameworks */,
+				9E3BDA651AD4FEC9005492AB /* CoreLocation.framework in Frameworks */,
 				44BBF4F21ACD655A001DEC7A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB95C021AD51F6200BD0595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EB95C141AD5202F00BD0595 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +351,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3BDA661AD4FED5005492AB /* CoreLocation.framework in Frameworks */,
 				9E878FB01A83484B00C07647 /* AVFoundation.framework in Frameworks */,
 				9E0ACB2E1A7A29C50038E158 /* libz.dylib in Frameworks */,
 				9E0ACB2C1A7A29BB0038E158 /* SystemConfiguration.framework in Frameworks */,
@@ -331,6 +367,9 @@
 		44BBF4F01ACD655A001DEC7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9EB95BFF1AD51DD400BD0595 /* Social.framework */,
+				9E3BDA6A1AD507E4005492AB /* MobileCoreServices.framework */,
+				9E3BDA641AD4FEC9005492AB /* CoreLocation.framework */,
 				44BBF4F11ACD655A001DEC7A /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -481,6 +520,26 @@
 			path = IndexView;
 			sourceTree = "<group>";
 		};
+		9EB95C061AD51F6200BD0595 /* ExuenetShare */ = {
+			isa = PBXGroup;
+			children = (
+				9EB95C091AD51F6200BD0595 /* ShareViewController.h */,
+				9EB95C0A1AD51F6200BD0595 /* ShareViewController.m */,
+				9EB95C151AD5298E00BD0595 /* ListViewController.h */,
+				9EB95C161AD5298E00BD0595 /* ListViewController.m */,
+				9EB95C071AD51F6200BD0595 /* Supporting Files */,
+			);
+			path = ExuenetShare;
+			sourceTree = "<group>";
+		};
+		9EB95C071AD51F6200BD0595 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EB95C081AD51F6200BD0595 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		9EC1AC7E1A8055110032AC7D /* MyCenterView */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +612,7 @@
 				9ED70BB71A789B1B00884C0A /* ExuenetSNS */,
 				9ED70C5E1A78C5C500884C0A /* Framework */,
 				44BBF4F31ACD655A001DEC7A /* ExuenetToday */,
+				9EB95C061AD51F6200BD0595 /* ExuenetShare */,
 				44BBF4F01ACD655A001DEC7A /* Frameworks */,
 				9ED70BB61A789B1B00884C0A /* Products */,
 			);
@@ -563,6 +623,7 @@
 			children = (
 				9ED70BB51A789B1B00884C0A /* 爪爪社区.app */,
 				44BBF4EF1ACD655A001DEC7A /* 爪爪社区.appex */,
+				9EB95C051AD51F6200BD0595 /* ExuenetShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -570,6 +631,7 @@
 		9ED70BB71A789B1B00884C0A /* ExuenetSNS */ = {
 			isa = PBXGroup;
 			children = (
+				9E3BDA611AD4BFAC005492AB /* 爪爪社区.entitlements */,
 				9ED70C021A78A00100884C0A /* ViewControllers */,
 				9E1930D21A7B6873006304C7 /* Views */,
 				9ED70C011A78A00100884C0A /* Utility */,
@@ -788,6 +850,23 @@
 			productReference = 44BBF4EF1ACD655A001DEC7A /* 爪爪社区.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		9EB95C041AD51F6200BD0595 /* ExuenetShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EB95C111AD51F6300BD0595 /* Build configuration list for PBXNativeTarget "ExuenetShare" */;
+			buildPhases = (
+				9EB95C011AD51F6200BD0595 /* Sources */,
+				9EB95C021AD51F6200BD0595 /* Frameworks */,
+				9EB95C031AD51F6200BD0595 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExuenetShare;
+			productName = ExuenetShare;
+			productReference = 9EB95C051AD51F6200BD0595 /* ExuenetShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9ED70BB41A789B1B00884C0A /* ExuenetSNS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9ED70BD81A789B1C00884C0A /* Build configuration list for PBXNativeTarget "ExuenetSNS" */;
@@ -801,6 +880,7 @@
 			);
 			dependencies = (
 				44BBF4FC1ACD655A001DEC7A /* PBXTargetDependency */,
+				9EB95C0F1AD51F6200BD0595 /* PBXTargetDependency */,
 			);
 			name = ExuenetSNS;
 			productName = ExuenetSNS;
@@ -818,9 +898,28 @@
 				TargetAttributes = {
 					44BBF4EE1ACD655A001DEC7A = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = G76D4JTRK4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					9EB95C041AD51F6200BD0595 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = G76D4JTRK4;
 					};
 					9ED70BB41A789B1B00884C0A = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = G76D4JTRK4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -840,12 +939,20 @@
 			targets = (
 				9ED70BB41A789B1B00884C0A /* ExuenetSNS */,
 				44BBF4EE1ACD655A001DEC7A /* ExuenetToday */,
+				9EB95C041AD51F6200BD0595 /* ExuenetShare */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		44BBF4ED1ACD655A001DEC7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB95C031AD51F6200BD0595 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -891,6 +998,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				44BBF4F81ACD655A001DEC7A /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB95C011AD51F6200BD0595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EB95C171AD5298E00BD0595 /* ListViewController.m in Sources */,
+				9EB95C0B1AD51F6200BD0595 /* ShareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,6 +1087,11 @@
 			target = 44BBF4EE1ACD655A001DEC7A /* ExuenetToday */;
 			targetProxy = 44BBF4FB1ACD655A001DEC7A /* PBXContainerItemProxy */;
 		};
+		9EB95C0F1AD51F6200BD0595 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EB95C041AD51F6200BD0595 /* ExuenetShare */;
+			targetProxy = 9EB95C0E1AD51F6200BD0595 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1001,7 +1122,9 @@
 		44BBF4FE1ACD655A001DEC7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ExuenetSNS/爪爪社区.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: JIN QI (A94XXBU278)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1010,6 +1133,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "爪爪社区";
+				PROVISIONING_PROFILE = "a727716a-f94e-4471-8003-b9bf708197a8";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1017,12 +1141,46 @@
 		44BBF4FF1ACD655A001DEC7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ExuenetSNS/爪爪社区.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: JIN QI (A94XXBU278)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = ExuenetToday/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "爪爪社区";
+				PROVISIONING_PROFILE = "a727716a-f94e-4471-8003-b9bf708197a8";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9EB95C121AD51F6300BD0595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ExuenetShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9EB95C131AD51F6300BD0595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = ExuenetShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1109,7 +1267,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: JIN QI (A94XXBU278)";
+				CODE_SIGN_ENTITLEMENTS = "ExuenetSNS/爪爪社区.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExuenetSNS/Utility",
@@ -1121,7 +1281,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "爪爪社区";
-				PROVISIONING_PROFILE = "0631a538-0c7d-4ba1-a705-8732e56abff4";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1131,7 +1291,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: JIN QI (A94XXBU278)";
+				CODE_SIGN_ENTITLEMENTS = "ExuenetSNS/爪爪社区.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExuenetSNS/Utility",
@@ -1143,7 +1305,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "爪爪社区";
-				PROVISIONING_PROFILE = "0631a538-0c7d-4ba1-a705-8732e56abff4";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -1155,6 +1317,15 @@
 			buildConfigurations = (
 				44BBF4FE1ACD655A001DEC7A /* Debug */,
 				44BBF4FF1ACD655A001DEC7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EB95C111AD51F6300BD0595 /* Build configuration list for PBXNativeTarget "ExuenetShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB95C121AD51F6300BD0595 /* Debug */,
+				9EB95C131AD51F6300BD0595 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

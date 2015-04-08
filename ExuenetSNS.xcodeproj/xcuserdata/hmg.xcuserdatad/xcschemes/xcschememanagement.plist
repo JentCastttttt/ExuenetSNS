@@ -9,9 +9,49 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ExuenetShare.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>ExuenetToday.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>exuenetPhoto.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>exuenetshare.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>44BBF4EE1ACD655A001DEC7A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E3BDA6F1AD50B40005492AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E3BDA861AD50B9F005492AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EB95C041AD51F6200BD0595</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9ED70BB41A789B1B00884C0A</key>
 		<dict>
 			<key>primary</key>

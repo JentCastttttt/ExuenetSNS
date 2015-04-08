@@ -9,13 +9,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ExuenetSNS/Views/MyCenterView/AlbumHeaderView.m"
-            timestampString = "449637470.569258"
+            filePath = "ExuenetToday/TodayViewController.m"
+            timestampString = "450167933.76065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-examineAlbumWithCompletion:"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "-widgetPerformUpdateWithCompletionHandler:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "exuenetshare/ShareViewController.m"
+            timestampString = "450178192.296021"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "-didSelectPost"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
