@@ -15,6 +15,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9EAF71F91AD66A6C007016F9"
+               BuildableName = "ExuenetAction.appex"
+               BlueprintName = "ExuenetAction"
+               ReferencedContainer = "container:ExuenetSNS.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "9ED70BB41A789B1B00884C0A"
                BuildableName = "&#x722a;&#x722a;&#x793e;&#x533a;.app"
                BlueprintName = "ExuenetSNS"
@@ -33,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9ED70BB41A789B1B00884C0A"
-            BuildableName = "&#x722a;&#x722a;&#x793e;&#x533a;.app"
-            BlueprintName = "ExuenetSNS"
+            BlueprintIdentifier = "9EAF71F91AD66A6C007016F9"
+            BuildableName = "ExuenetAction.appex"
+            BlueprintName = "ExuenetAction"
             ReferencedContainer = "container:ExuenetSNS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

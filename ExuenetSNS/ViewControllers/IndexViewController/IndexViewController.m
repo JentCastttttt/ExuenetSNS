@@ -57,6 +57,7 @@
     [Utility instantiationProperty:model withDictionary:dic];
     NSLog(@"%@",model);
     
+    //若要使Today Extension 可以获取到宿主App的数据, 则需要使用 initWithSuiteName:group_key 来保存和读取，ios7以及之前的版本的获取NSUserDefaults数据的方法是无法进行数据共享的。
     NSUserDefaults *userDefault = [[NSUserDefaults alloc] initWithSuiteName:k_APP_GROUP_KEY];
     [userDefault setObject:@{@"1234key":@"value1234"} forKey:@"123"];
     [userDefault setObject:@"Jim" forKey:@"name"];
@@ -64,7 +65,66 @@
     count ++ ;
     [userDefault setObject:[NSNumber numberWithInteger:count] forKey:@"number"];
     [userDefault synchronize];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     
+    //讲推送设置以及信息加入
+    UIApplication* app = [UIApplication sharedApplication];
+    for (UILocalNotification* notification in app.scheduledLocalNotifications) {
+        if ([notification.userInfo objectForKey:@"key"]) {
+            [app cancelLocalNotification:notification];
+        }
+    }
+    
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    
+    //设置时间当前加20秒
+    NSDate* pushDate = [NSDate dateWithTimeIntervalSinceNow:5];
+    
+    /*推送时区设置:从网上搜到
+     timeZone是UILocalNotification激发时间是否根据时区改变而改变，如果设置为nil的话，那么UILocalNotification将在一段时候后被激发，而不是某一个确切时间被激发。*/
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    
+    ///推送时间设置
+    localNotification.fireDate = pushDate;
+    
+    //时间间隔,若不设置将只会推送1次
+    localNotification.repeatInterval = kCFCalendarUnitDay;
+    
+    //推送时的声音,（若不设置的话系统推送时会无声音）
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    
+    //推送的文字信息（若不设置，推送中心中不显示文字，有声音提示前提是设置有声音）
+    localNotification.alertBody = @"Hello world";
+    
+    //推送时小图标的设置，PS:这个东西不知道还有啥用
+    localNotification.alertLaunchImage = [[NSBundle mainBundle] pathForResource:@"1" ofType:@"png"];
+    
+    localNotification.alertAction = @"确定";
+    
+    localNotification.applicationIconBadgeNumber = 10;
+    
+    //对应的在App delegate 里面注册是一系列的动作 UIMutableUserNotificationCategory
+    localNotification.category = @"alert";
+    
+    //这个东西，到时用于定位是哪个notification,以便取消用
+    NSDictionary* infoDic = [NSDictionary dictionaryWithObject:@"name" forKey:@"key"];
+    localNotification.userInfo = infoDic;
+    
+    //讲推送设置以及信息加入
+    BOOL status = YES;
+    for (UILocalNotification* notification in app.scheduledLocalNotifications) {
+        if ([notification.userInfo objectForKey:@"key"]) {
+            status = NO;
+        }
+    }
+    
+    if (status) {
+        //加入推送(只能加入一次)
+        [app scheduleLocalNotification:localNotification];
+    }
 }
 
 /**

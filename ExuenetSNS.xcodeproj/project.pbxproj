@@ -67,6 +67,9 @@
 		9E783D7D1A7F6A3A0050311D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E783D7C1A7F6A3A0050311D /* 1.png */; };
 		9E783D7F1A7F6A9F0050311D /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E783D7E1A7F6A9F0050311D /* 2.png */; };
 		9E878FB01A83484B00C07647 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E878FAF1A83484B00C07647 /* AVFoundation.framework */; };
+		9EAF72001AD66A6C007016F9 /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAF71FF1AD66A6C007016F9 /* ActionViewController.m */; };
+		9EAF72021AD66A6C007016F9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EAF72011AD66A6C007016F9 /* MainInterface.storyboard */; };
+		9EAF72051AD66A6C007016F9 /* ExuenetAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9EAF71FA1AD66A6C007016F9 /* ExuenetAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9EB95C0B1AD51F6200BD0595 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB95C0A1AD51F6200BD0595 /* ShareViewController.m */; };
 		9EB95C101AD51F6200BD0595 /* ExuenetShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9EB95C051AD51F6200BD0595 /* ExuenetShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9EB95C141AD5202F00BD0595 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3BDA6A1AD507E4005492AB /* MobileCoreServices.framework */; };
@@ -119,6 +122,13 @@
 			remoteGlobalIDString = 44BBF4EE1ACD655A001DEC7A;
 			remoteInfo = ExuenetToday;
 		};
+		9EAF72031AD66A6C007016F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ED70BAD1A789B1B00884C0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EAF71F91AD66A6C007016F9;
+			remoteInfo = ExuenetAction;
+		};
 		9EB95C0E1AD51F6200BD0595 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9ED70BAD1A789B1B00884C0A /* Project object */;
@@ -135,6 +145,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				9EAF72051AD66A6C007016F9 /* ExuenetAction.appex in Embed App Extensions */,
 				44BBF4FD1ACD655A001DEC7A /* 爪爪社区.appex in Embed App Extensions */,
 				9EB95C101AD51F6200BD0595 /* ExuenetShare.appex in Embed App Extensions */,
 			);
@@ -240,6 +251,11 @@
 		9E783D7C1A7F6A3A0050311D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		9E783D7E1A7F6A9F0050311D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		9E878FAF1A83484B00C07647 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9EAF71FA1AD66A6C007016F9 /* ExuenetAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ExuenetAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EAF71FD1AD66A6C007016F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EAF71FE1AD66A6C007016F9 /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		9EAF71FF1AD66A6C007016F9 /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		9EAF72011AD66A6C007016F9 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		9EB95BFF1AD51DD400BD0595 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		9EB95C051AD51F6200BD0595 /* ExuenetShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ExuenetShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB95C081AD51F6200BD0595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -336,6 +352,13 @@
 				9E3BDA6B1AD507E4005492AB /* MobileCoreServices.framework in Frameworks */,
 				9E3BDA651AD4FEC9005492AB /* CoreLocation.framework in Frameworks */,
 				44BBF4F21ACD655A001DEC7A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EAF71F71AD66A6C007016F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +543,25 @@
 			path = IndexView;
 			sourceTree = "<group>";
 		};
+		9EAF71FB1AD66A6C007016F9 /* ExuenetAction */ = {
+			isa = PBXGroup;
+			children = (
+				9EAF71FE1AD66A6C007016F9 /* ActionViewController.h */,
+				9EAF71FF1AD66A6C007016F9 /* ActionViewController.m */,
+				9EAF72011AD66A6C007016F9 /* MainInterface.storyboard */,
+				9EAF71FC1AD66A6C007016F9 /* Supporting Files */,
+			);
+			path = ExuenetAction;
+			sourceTree = "<group>";
+		};
+		9EAF71FC1AD66A6C007016F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EAF71FD1AD66A6C007016F9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		9EB95C061AD51F6200BD0595 /* ExuenetShare */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,6 +655,7 @@
 				9ED70C5E1A78C5C500884C0A /* Framework */,
 				44BBF4F31ACD655A001DEC7A /* ExuenetToday */,
 				9EB95C061AD51F6200BD0595 /* ExuenetShare */,
+				9EAF71FB1AD66A6C007016F9 /* ExuenetAction */,
 				44BBF4F01ACD655A001DEC7A /* Frameworks */,
 				9ED70BB61A789B1B00884C0A /* Products */,
 			);
@@ -624,6 +667,7 @@
 				9ED70BB51A789B1B00884C0A /* 爪爪社区.app */,
 				44BBF4EF1ACD655A001DEC7A /* 爪爪社区.appex */,
 				9EB95C051AD51F6200BD0595 /* ExuenetShare.appex */,
+				9EAF71FA1AD66A6C007016F9 /* ExuenetAction.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -850,6 +894,23 @@
 			productReference = 44BBF4EF1ACD655A001DEC7A /* 爪爪社区.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		9EAF71F91AD66A6C007016F9 /* ExuenetAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EAF72081AD66A6C007016F9 /* Build configuration list for PBXNativeTarget "ExuenetAction" */;
+			buildPhases = (
+				9EAF71F61AD66A6C007016F9 /* Sources */,
+				9EAF71F71AD66A6C007016F9 /* Frameworks */,
+				9EAF71F81AD66A6C007016F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExuenetAction;
+			productName = ExuenetAction;
+			productReference = 9EAF71FA1AD66A6C007016F9 /* ExuenetAction.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9EB95C041AD51F6200BD0595 /* ExuenetShare */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EB95C111AD51F6300BD0595 /* Build configuration list for PBXNativeTarget "ExuenetShare" */;
@@ -881,6 +942,7 @@
 			dependencies = (
 				44BBF4FC1ACD655A001DEC7A /* PBXTargetDependency */,
 				9EB95C0F1AD51F6200BD0595 /* PBXTargetDependency */,
+				9EAF72041AD66A6C007016F9 /* PBXTargetDependency */,
 			);
 			name = ExuenetSNS;
 			productName = ExuenetSNS;
@@ -904,6 +966,10 @@
 								enabled = 1;
 							};
 						};
+					};
+					9EAF71F91AD66A6C007016F9 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = G76D4JTRK4;
 					};
 					9EB95C041AD51F6200BD0595 = {
 						CreatedOnToolsVersion = 6.2;
@@ -940,6 +1006,7 @@
 				9ED70BB41A789B1B00884C0A /* ExuenetSNS */,
 				44BBF4EE1ACD655A001DEC7A /* ExuenetToday */,
 				9EB95C041AD51F6200BD0595 /* ExuenetShare */,
+				9EAF71F91AD66A6C007016F9 /* ExuenetAction */,
 			);
 		};
 /* End PBXProject section */
@@ -949,6 +1016,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EAF71F81AD66A6C007016F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EAF72021AD66A6C007016F9 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +1073,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				44BBF4F81ACD655A001DEC7A /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EAF71F61AD66A6C007016F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EAF72001AD66A6C007016F9 /* ActionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1087,6 +1170,11 @@
 			target = 44BBF4EE1ACD655A001DEC7A /* ExuenetToday */;
 			targetProxy = 44BBF4FB1ACD655A001DEC7A /* PBXContainerItemProxy */;
 		};
+		9EAF72041AD66A6C007016F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EAF71F91AD66A6C007016F9 /* ExuenetAction */;
+			targetProxy = 9EAF72031AD66A6C007016F9 /* PBXContainerItemProxy */;
+		};
 		9EB95C0F1AD51F6200BD0595 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9EB95C041AD51F6200BD0595 /* ExuenetShare */;
@@ -1150,6 +1238,37 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "爪爪社区";
 				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9EAF72061AD66A6C007016F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ExuenetAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9EAF72071AD66A6C007016F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = ExuenetAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1320,6 +1439,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9EAF72081AD66A6C007016F9 /* Build configuration list for PBXNativeTarget "ExuenetAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EAF72061AD66A6C007016F9 /* Debug */,
+				9EAF72071AD66A6C007016F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		9EB95C111AD51F6300BD0595 /* Build configuration list for PBXNativeTarget "ExuenetShare" */ = {
 			isa = XCConfigurationList;

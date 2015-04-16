@@ -23,6 +23,51 @@
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+   
+//  iOS系统的APNS使用。 区分iOS8之后 以为 iOS8之前的推送用法
+//#ifdef __IPHONE_8_0
+//    //ios8注册推送
+//    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIRemoteNotificationTypeBadge
+//                                                                                         |UIRemoteNotificationTypeSound
+//                                                                                         |UIRemoteNotificationTypeAlert) categories:nil];
+//    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+//#else
+//    //register to receive notifications
+//    UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
+//    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
+//#endif
+    
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)])
+    {
+        //1.创建消息上面要添加的动作(按钮的形式显示出来)
+        //接受按钮
+        UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
+        acceptAction.identifier = @"acceptAction"; //按钮的标示
+        acceptAction.title = @"接受"; //按钮的标题
+        acceptAction.activationMode = UIUserNotificationActivationModeForeground; //当点击的时候启动程序
+        
+        //拒绝按钮
+        UIMutableUserNotificationAction *rejectAction = [[UIMutableUserNotificationAction alloc] init];
+        rejectAction.identifier = @"rejectAction";
+        rejectAction.title = @"拒绝";
+        rejectAction.activationMode = UIUserNotificationActivationModeBackground; //当点击的时候不启动程序，在后台处理
+        rejectAction.authenticationRequired = YES;//需要解锁才能处理，如果action.activationMode = UIUserNotificationActivationModeForeground;则这个属性被忽略；
+        rejectAction.destructive = YES;
+        
+        //2.创建动作(按钮)的类别集合
+        UIMutableUserNotificationCategory *categorys = [[UIMutableUserNotificationCategory alloc] init];
+        categorys.identifier = @"alert";
+        NSArray *actions = @[acceptAction, rejectAction];
+        [categorys setActions:actions forContext:UIUserNotificationActionContextMinimal];
+        
+        //3.创建UIUserNotificationSettings，并设置消息的显示类类型以及注册推送
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:[NSSet setWithObject:categorys]]];
+        
+        //用这两个方法判断是否注册成功
+        // NSLog(@"currentUserNotificationSettings = %@",[[UIApplication sharedApplication] currentUserNotificationSettings]);
+        //[[UIApplication sharedApplication] isRegisteredForRemoteNotifications];
+        
+    }
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -44,6 +89,88 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+//#ifdef __IPHONE_8_0
+//ios8需要调用内容
+//- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+//{
+//    //register to receive notifications
+//    [application registerForRemoteNotifications];
+//}
+//
+//- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void(^)())completionHandler
+//{
+//    //handle the actions
+//    if ([identifier isEqualToString:@"declineAction"]){
+//    }
+//    else if ([identifier isEqualToString:@"answerAction"]){
+//    }
+//}
+//
+//#endif
+//
+//- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+//{
+//    NSLog(@"设备令牌: %@", deviceToken);
+//    NSString *tokeStr = [NSString stringWithFormat:@"%@",deviceToken];
+//    if ([tokeStr length] == 0) {
+//        return;
+//    }
+//}
+//
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+//{
+//    NSLog(@"%@",[[userInfo objectForKey:@"aps"] objectForKey:@"alert"]);
+//    //以警告框的方式来显示推送消息
+//    if ([[userInfo objectForKey:@"aps"] objectForKey:@"alert"]!=NULL) {
+//        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"经过推送发送过来的消息"
+//                                                        message:[[userInfo objectForKey:@"aps"] objectForKey:@"alert"]
+//                                                       delegate:self
+//                                              cancelButtonTitle:@"关闭"
+//                                              otherButtonTitles:@"处理",nil];
+//        [alert show];
+//    }
+//}
+//
+//-(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+//    NSLog(@"注册推送服务时，发生以下错误： %@",error);
+//}
+
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    NSLog(@"%@", notificationSettings);
+}
+
+-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void(^)())completionHandler
+{
+    //在非本App界面时收到本地消息，下拉消息会有快捷回复的按钮，点击按钮后调用的方法，根据identifier来判断点击的哪个按钮，notification为消息内容
+    NSLog(@"----%@\n----%@\n----%@\n",identifier,notification,notification.userInfo);
+    //处理完消息，最后一定要调用这个代码块
+    if([identifier isEqualToString:@"rejectAction"]) {
+        //设置快速回复
+    }
+    
+    completionHandler();
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification*)notification
+{
+    NSLog(@"%@",[notification.userInfo objectForKey:@"key"]);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"接收到本地提醒 in app"
+                          
+                                                    message:notification.alertBody
+                          
+                                                   delegate:nil
+                          
+                                          cancelButtonTitle:@"确定"
+                          
+                                          otherButtonTitles:nil];
+    
+    [alert show];
+    
+    //这里，你就可以通过notification的useinfo，干一些你想做的事情了
+    application.applicationIconBadgeNumber -= 1;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
