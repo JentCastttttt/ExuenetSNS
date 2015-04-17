@@ -173,6 +173,22 @@
     application.applicationIconBadgeNumber -= 1;
 }
 
+- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply
+{
+    
+    NSDictionary *serializedLocation = @{
+                                         @"latitude":   [NSNumber numberWithDouble:1.55],
+                                         @"longitude":  [NSNumber numberWithDouble:2.00],
+                                         @"altitude":   [NSNumber numberWithDouble:152],
+                                         @"speed":      [NSNumber numberWithDouble:80]
+                                         };
+    
+    reply(@{@"location": serializedLocation});
+    
+    NSLog(@"userInfo:%@",userInfo);
+    NSLog(@"reply:%@",reply);
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

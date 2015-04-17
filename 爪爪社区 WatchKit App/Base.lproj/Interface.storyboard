@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label width="136" alignment="center" verticalAlignment="center" text="You Guess Number" textAlignment="center" minimumScaleFactor="0.59999999999999998" id="QvR-Gw-5lh">
+                            <color key="textColor" red="0.95587907829999996" green="1" blue="0.24586558040000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Guess" id="8tM-Mi-t63">
+                            <color key="titleColor" red="1" green="0.3083078629954622" blue="0.45966571239587395" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="guessThisNumber:" destination="AgC-eL-Hgc" id="ntl-9t-2bh"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="通知" id="dpD-kR-fER">
+                            <color key="titleColor" red="0.71107117951991006" green="0.48379982400048804" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="notifyMe" destination="AgC-eL-Hgc" id="LeA-Z8-KvC"/>
+                            </connections>
+                        </button>
+                        <slider width="1" height="26" alignment="center" value="1" maximum="100" steps="100" id="dbL-vX-Fnw">
+                            <connections>
+                                <action selector="addNumber:" destination="AgC-eL-Hgc" id="R1y-lg-8yr"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="guessButton" destination="8tM-Mi-t63" id="GNn-OK-kpd"/>
+                        <outlet property="numberLabel" destination="QvR-Gw-5lh" id="Efg-PS-6dX"/>
+                        <outlet property="numberSlider" destination="dbL-vX-Fnw" id="oRj-FT-U96"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-205" y="-97"/>
+        </scene>
+        <!--设置-->
+        <scene sceneID="J2T-we-6Ku">
+            <objects>
+                <controller identifier="settingController" title="设置" id="q3D-Dl-Wf1" customClass="SettingInterfaceController">
+                    <items>
+                        <table alignment="left" id="bYM-1X-pSj">
+                            <items>
+                                <tableRow identifier="settingIdentifier" id="5j1-UW-wYf" customClass="IconWithNameRowModel">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" radius="0.0" id="I6v-kq-O3x">
+                                        <items>
+                                            <imageView width="34" height="28" alignment="left" id="Gzf-Bn-Rwk">
+                                                <color key="tintColor" red="0.28682673149999999" green="0.64432660019999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                            <label width="84" height="27" alignment="left" text="Label" id="tYH-dN-z6a">
+                                                <color key="textColor" red="0.28682673149999999" green="0.64432660019999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="iconView" destination="Gzf-Bn-Rwk" id="tO3-Tp-T6D"/>
+                                        <outlet property="nameLabel" destination="tYH-dN-z6a" id="kRo-I3-AAx"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="contentIdentifier" id="ZL2-bd-DDH" customClass="ContentModel">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" radius="3" id="iWC-Xk-pQd">
+                                        <items>
+                                            <label width="136" alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="91L-kG-azA">
+                                                <color key="textColor" red="1" green="0.30830786300000002" blue="0.45966571239999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="contentLabel" destination="91L-kG-azA" id="fMi-Se-qGu"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="settingView" destination="bYM-1X-pSj" id="GRW-YB-jmp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-14" y="-97"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <imageView width="136" height="50" alignment="left" image="NoRain" id="2oh-Bm-zqn"/>
+                        <label alignment="center" text="Alert Label" numberOfLines="0" id="1ff-0k-Tpu">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="newMessage" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="1ff-0k-Tpu" id="81s-89-4XJ"/>
+                        <segue destination="N4o-aI-fgJ" kind="relationship" relationship="dynamicNotificationInterface" id="0OG-xh-KRR"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="-205" y="159"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Ecq-Na-gNI">
+            <objects>
+                <controller id="N4o-aI-fgJ" customClass="NotificationController">
+                    <items>
+                        <imageView width="136" height="50" alignment="left" image="NotRainingWillStartNoStopHeavy" id="Qji-W6-V00"/>
+                        <label width="136" alignment="left" text="Label Text Alert" id="bVh-Uv-F9R"/>
+                        <imageView width="136" alignment="left" image="NotRainingWillStartNoStopLight" id="0h2-pj-u9z"/>
+                    </items>
+                    <connections>
+                        <outlet property="hasRain" destination="0h2-pj-u9z" id="bg8-mu-dJt"/>
+                        <outlet property="noRainImage" destination="Qji-W6-V00" id="GCx-zg-TJC"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-14" y="191"/>
+        </scene>
+    </scenes>
+</document>
