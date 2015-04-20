@@ -7,14 +7,17 @@
 //
 
 #import "InterfaceController.h"
-
+#import "MMWormhole.h"
 
 @interface InterfaceController()
 {
     NSInteger rightNumber;
     float guessNumber;
 }
+@property (nonatomic, strong) MMWormhole *wormhole;
+
 - (IBAction)addNumber:(float)value;
+
 @end
 
 
@@ -26,6 +29,29 @@
     // Configure interface objects here.
     rightNumber = 5;
     guessNumber = 0.0;
+    
+    // Initialize the wormhole
+    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.mutualmobile.wormhole"
+                                                         optionalDirectory:@"wormhole"];
+    
+    // Obtain an initial value for the selection message from the wormhole
+    id messageObject = [self.wormhole messageWithIdentifier:@"selection"];
+    NSString *string = [messageObject valueForKey:@"selectionString"];
+    
+    if (string != nil) {
+        [self.numberLabel setText:string];
+    }
+    
+    // Listen for changes to the selection message. The selection message contains a string value
+    // identified by the selectionString key. Note that the type of the key is included in the
+    // name of the key.
+    [self.wormhole listenForMessageWithIdentifier:@"selection" listener:^(id messageObject) {
+        NSString *string = [messageObject valueForKey:@"selectionString"];
+        
+        if (string != nil) {
+            [self.numberLabel setText:string];
+        }
+    }];
 }
 
 - (void)willActivate {
@@ -52,7 +78,12 @@
     [self pushControllerWithName:@"settingController" context:@"sasdf"];
 }
 
+// Pass messages each time a button is tapped using the identifier button
+// The messages contain a single number value with the buttonNumber key
 - (IBAction)addNumber:(float)value {
+    //发送一个Message通知给宿主App.
+    [self.wormhole passMessageObject:@{@"buttonNumber" : @(1)} identifier:@"button"];
+    
     NSLog(@"%.0f",value);
     guessNumber = value;
     [self.numberLabel setText:[NSString stringWithFormat:@"You Guess is:%.0f",value]];
@@ -85,6 +116,7 @@
     
 }
 
+//不打开宿主App，将宿主App获取到的数据返回给Apple Watch. 从而进行相应的处理
 - (void) requestLocationFromPhone
 {
     [WKInterfaceController openParentApplication:@{@"request":@"location"}
@@ -104,21 +136,6 @@
                                                    
                                                    // update our label with the newest location's speed
                                                    [self.numberLabel setText:speedString];
-                                                   
-                                                   // next, get the lat/lon
-//                                                   NSNumber *latitude = location[@"latitude"];
-//                                                   NSNumber *longitude = location[@"longitude"];
-//                                                   
-//                                                   // and update our map
-//                                                   MKCoordinateSpan span = MKCoordinateSpanMake(0.05, 0.05);
-//                                                   CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude.doubleValue, longitude.doubleValue);
-//                                                   
-//                                                   // drop a pin where the user is currently
-//                                                   [_mapView addAnnotation:coordinate withPinColor:WKInterfaceMapPinColorRed];
-//                                                   
-//                                                   // and give it a region to display
-//                                                   MKCoordinateRegion region = MKCoordinateRegionMake(coordinate, span);
-//                                                   [_mapView setRegion:region];
                                                }
                                                
                                                // the request failed
@@ -128,16 +145,4 @@
                                            }];
 }
 
-- (IBAction)notifyMeNow {
-    
-    UILocalNotification* notification = [UILocalNotification new];
-    notification.alertTitle = @"Notification From WatchKit";
-    notification.alertBody = @"Notification";
-    
-//    [WKInterfaceController presentLocalNotificationNow:notification completion:nil];
-}
-
 @end
-
-
-

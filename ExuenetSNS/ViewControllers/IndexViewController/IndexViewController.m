@@ -18,6 +18,8 @@
 
 @interface IndexViewController ()
 
+@property (nonatomic, strong) MMWormhole *wormhole;
+
 @end
 
 @implementation IndexViewController
@@ -65,6 +67,26 @@
     count ++ ;
     [userDefault setObject:[NSNumber numberWithInteger:count] forKey:@"number"];
     [userDefault synchronize];
+    
+    
+//  通过这个方法可以实现宿主App的检测值改变的同时，使Apple Watch获取到通知，从而更新Apple Watch的显示数据
+//  同理，此方法也使用于改变Apple Watch中的数据，修改宿主App的显示数据
+//    // Initialize the wormhole
+//    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.mutualmobile.wormhole"
+//                                                         optionalDirectory:@"wormhole"];
+//    
+//    // Obtain an initial message from the wormhole
+//    id messageObject = [self.wormhole messageWithIdentifier:@"button"];
+//    NSNumber *number = [messageObject valueForKey:@"buttonNumber"];
+//    
+//    // Become a listener for changes to the wormhole for the button message
+//    [self.wormhole listenForMessageWithIdentifier:@"button" listener:^(id messageObject) {
+//        // The number is identified with the buttonNumber key in the message object
+//        NSNumber *number = [messageObject valueForKey:@"buttonNumber"];
+////        self.numberLabel.text = [number stringValue];
+//    }];
+//    
+//    [self.wormhole passMessageObject:@{@"selectionString" : title} identifier:@"selection"];
 }
 
 - (void)viewWillAppear:(BOOL)animated

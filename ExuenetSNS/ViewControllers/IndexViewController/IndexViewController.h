@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "MMWormhole.h"
 
 @interface IndexViewController : BaseViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 {

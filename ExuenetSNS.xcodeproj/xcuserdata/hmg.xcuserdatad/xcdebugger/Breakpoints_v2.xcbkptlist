@@ -25,29 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x722a;&#x722a;&#x793e;&#x533a; WatchKit Extension/NotificationController.m"
-            timestampString = "450952686.351942"
+            filePath = "ExuenetSNS/AppDelegate.m"
+            timestampString = "451188472.510221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "-didReceiveLocalNotification:withCompletion:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x722a;&#x722a;&#x793e;&#x533a; WatchKit Extension/NotificationController.m"
-            timestampString = "450952687.769676"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-didReceiveRemoteNotification:withCompletion:"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-application:handleWatchKitExtensionRequest:reply:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

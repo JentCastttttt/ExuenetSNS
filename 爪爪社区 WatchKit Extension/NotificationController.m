@@ -59,7 +59,6 @@
     completionHandler(WKUserNotificationInterfaceTypeCustom);
 }
 
-
 @end
 
 
