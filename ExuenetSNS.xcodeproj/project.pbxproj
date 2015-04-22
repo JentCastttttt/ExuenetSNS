@@ -53,7 +53,7 @@
 		9E3BDA651AD4FEC9005492AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3BDA641AD4FEC9005492AB /* CoreLocation.framework */; };
 		9E3BDA661AD4FED5005492AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3BDA641AD4FEC9005492AB /* CoreLocation.framework */; };
 		9E3BDA6B1AD507E4005492AB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3BDA6A1AD507E4005492AB /* MobileCoreServices.framework */; };
-		9E3E29B31AE4A4BF003CD34B /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E29B21AE4A4BF003CD34B /* MMWormhole.m */; };
+		9E3E29B31AE4A4BF003CD34B /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E29B21AE4A4BF003CD34B /* MMWormhole.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		9E3E29B41AE4A4BF003CD34B /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E29B21AE4A4BF003CD34B /* MMWormhole.m */; };
 		9E3E29C51AE4A7A0003CD34B /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9E3E29B61AE4A7A0003CD34B /* DateTools.bundle */; };
 		9E3E29C61AE4A7A0003CD34B /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9E3E29B61AE4A7A0003CD34B /* DateTools.bundle */; };

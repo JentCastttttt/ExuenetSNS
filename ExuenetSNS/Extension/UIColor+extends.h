@@ -51,7 +51,8 @@ static NSString * kColoursCMYK_K = @"CMYK-k";
 
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
-@interface UIColor (Colours)
+// 扩展UIColor类
+@interface UIColor (extends)
 
 #elif TARGET_OS_MAC
 #import <AppKit/AppKit.h>
@@ -85,10 +86,6 @@ typedef NS_ENUM(NSInteger, ColorDistance) {
 };
 
 #pragma mark - Color from Hex/RGBA/HSBA/CIE_LAB/CMYK
-
-// 扩展UIColor类
-@interface UIColor (extends)
-
 // 将十六进制的颜色值转为objective-c的颜色 例如  [UIColor colorFromString:@"ff8b3a"]
 + (UIColor *)colorFromString:(NSString *)hexColor;
 

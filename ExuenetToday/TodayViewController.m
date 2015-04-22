@@ -32,7 +32,7 @@
     
     NSInteger countNumber = [[userDefault objectForKey:@"number"] integerValue];
     countNumber += 100 ;
-    label.text = [NSString stringWithFormat:@"%@%ld",[userDefault objectForKey:@"name"],countNumber];
+    label.text = [NSString stringWithFormat:@"userCount-%@-%ld",[userDefault objectForKey:@"name"],countNumber];
     [userDefault setObject:[NSNumber numberWithInteger:countNumber] forKey:@"number"];
     [userDefault synchronize];
     NSLog(@"%@\n%ld",[userDefault objectForKey:@"123"],countNumber);
