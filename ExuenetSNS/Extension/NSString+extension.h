@@ -83,4 +83,20 @@
  */
 + (NSString *)latinEncode:(NSString*)string;
 
+/*!
+ 服务端字段返回非法数据，可能造成闪退；例如：原本字段的数据是个{}，实际返回了""。
+ 这个Extension就是解决此问题的，可能不完备。
+ */
+- (id)objectAtIndex:(NSUInteger)index;
+- (id)objectAtIndexedSubscript:(NSUInteger)idx;
+- (NSUInteger)count;
+- (BOOL)containsObject:(id)anObject;
+- (id)firstObject;
+- (id)lastObject;
+
+- (id)valueForKey:(NSString *)key;
+- (id)objectForKey:(NSString *)key;
+- (NSArray *)allKeys;
+- (NSArray *)allValues;
+
 @end

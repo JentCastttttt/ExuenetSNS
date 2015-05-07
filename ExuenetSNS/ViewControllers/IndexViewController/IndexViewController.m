@@ -71,6 +71,9 @@
     [userDefault synchronize];
     
     
+//    NSString *aa = @"aaa";
+//    [aa allKeys];
+    
 //  通过这个方法可以实现宿主App的检测值改变的同时，使Apple Watch获取到通知，从而更新Apple Watch的显示数据
 //  同理，此方法也使用于改变Apple Watch中的数据，修改宿主App的显示数据
 //    // Initialize the wormhole

@@ -202,4 +202,85 @@
     return [NSString stringWithCString:c encoding:NSUTF8StringEncoding];
 }
 
+- (id)objectAtIndex:(NSUInteger)index
+{
+#ifdef DEBUG
+    NSAssert(NO, @"接口返回非法数据");
+#endif
+    return nil;
+}
+
+- (id)objectAtIndexedSubscript:(NSUInteger)idx
+{
+#ifdef DEBUG
+    NSAssert(NO, @"接口返回非法数据");
+#endif
+    return nil;
+}
+
+- (NSUInteger)count
+{
+#ifdef DEBUG
+    NSAssert(NO, @"接口返回非法数据");
+#endif
+    return 0;
+}
+
+- (BOOL)containsObject:(id)anObject
+{
+#ifdef DEBUG
+    NSAssert(NO, @"接口返回非法数据");
+#endif
+    return NO;
+}
+
+- (id)firstObject
+{
+#ifdef DEBUG
+    NSAssert(NO, @"接口返回非法数据");
+#endif
+    return nil;
+}
+
+- (id)lastObject
+{
+#ifdef DEBUG
+    NSAssert(NO, @"接口返回非法数据");
+#endif
+    return nil;
+}
+
+- (id)valueForKey:(NSString *)key
+{
+#ifdef DEBUG
+    NSAssert(NO, @"接口返回非法数据");
+#endif
+    return nil;
+}
+
+- (id)objectForKey:(NSString *)key
+{
+#ifdef DEBUG
+    NSAssert(NO, @"接口返回非法数据");
+#endif
+    return nil;
+}
+
+- (NSArray *)allKeys
+{
+#ifdef DEBUG
+    NSAssert(NO, @"接口返回非法数据");
+#endif
+    return nil;
+}
+
+- (NSArray *)allValues
+{
+#ifdef DEBUG
+    NSAssert(NO, @"接口返回非法数据");
+#endif
+    return nil;
+}
+
+
 @end
