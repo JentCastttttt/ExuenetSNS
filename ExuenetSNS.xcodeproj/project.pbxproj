@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4417CAA51AFB67630078B06B /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4417CAA41AFB67630078B06B /* UIImage+Tint.m */; };
+		4417CAA61AFB67630078B06B /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4417CAA41AFB67630078B06B /* UIImage+Tint.m */; };
 		44BBF4F21ACD655A001DEC7A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BBF4F11ACD655A001DEC7A /* NotificationCenter.framework */; };
 		44BBF4F81ACD655A001DEC7A /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BBF4F71ACD655A001DEC7A /* TodayViewController.m */; };
 		44BBF4FD1ACD655A001DEC7A /* 爪爪社区.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 44BBF4EF1ACD655A001DEC7A /* 爪爪社区.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -208,6 +210,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4417CAA21AFB636F0078B06B /* MJGAvailability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJGAvailability.h; sourceTree = "<group>"; };
+		4417CAA31AFB67630078B06B /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		4417CAA41AFB67630078B06B /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		44BBF4EF1ACD655A001DEC7A /* 爪爪社区.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "爪爪社区.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BBF4F11ACD655A001DEC7A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		44BBF4F51ACD655A001DEC7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -571,6 +576,7 @@
 		9E1930C91A7B6719006304C7 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				4417CAA21AFB636F0078B06B /* MJGAvailability.h */,
 				9E3E29B51AE4A7A0003CD34B /* DateTools */,
 				9E3E29B01AE4A4BF003CD34B /* MMWormhole */,
 				9E2A1AD01A81C8E70004D328 /* Pullingrefreshtableview */,
@@ -928,6 +934,8 @@
 				9E2A1ACE1A81C3640004D328 /* UIView+WhenTappedBlocks.m */,
 				9E3557101A8B052100C58839 /* NSString+extension.h */,
 				9E3557111A8B052100C58839 /* NSString+extension.m */,
+				4417CAA31AFB67630078B06B /* UIImage+Tint.h */,
+				4417CAA41AFB67630078B06B /* UIImage+Tint.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1332,6 +1340,7 @@
 				9E3E29D61AE4A7A0003CD34B /* DTTimePeriodGroup.m in Sources */,
 				9E3E29CA1AE4A7A0003CD34B /* DTError.m in Sources */,
 				9E3E29D31AE4A7A0003CD34B /* DTTimePeriodCollection.m in Sources */,
+				4417CAA61AFB67630078B06B /* UIImage+Tint.m in Sources */,
 				44BBF4F81ACD655A001DEC7A /* TodayViewController.m in Sources */,
 				9E3E29D91AE4A7A0003CD34B /* NSDate+DateTools.m in Sources */,
 				9E3E29D01AE4A7A0003CD34B /* DTTimePeriodChain.m in Sources */,
@@ -1400,6 +1409,7 @@
 				9ED70C351A78C4D800884C0A /* AFHTTPRequestOperation.m in Sources */,
 				9E4E47451A8093D5003116F0 /* ModifierViewController.m in Sources */,
 				9E4E47821A80B95D003116F0 /* QBImagePickerAssetCell.m in Sources */,
+				4417CAA51AFB67630078B06B /* UIImage+Tint.m in Sources */,
 				9ED70BBE1A789B1B00884C0A /* AppDelegate.m in Sources */,
 				9ED70C511A78C4E400884C0A /* UIAlertView+AFNetworking.m in Sources */,
 				9E2A1AC91A81BFE60004D328 /* AlbumHeaderView.m in Sources */,

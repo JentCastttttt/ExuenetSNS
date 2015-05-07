@@ -11,6 +11,10 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+
+
+#import "MJGAvailability.h"
+
 #import "PublicDefine.h"
 #import "LoginViewController.h"
 #import "QBImagePickerController.h"
@@ -34,7 +38,7 @@
  [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], 与__FUNCTION__重复
  */
 
-#if 1//TARGET_IPHONE_SIMULATOR
+#if TARGET_IPHONE_SIMULATOR
 #define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
 #define NSLog(FORMAT, ...) nil

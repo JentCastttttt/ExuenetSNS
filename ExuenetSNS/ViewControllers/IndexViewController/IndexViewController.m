@@ -13,6 +13,7 @@
 #import "ClassmatesCell.h"
 #import "CollectionHeaderView.h"
 #import "UserModel.h"
+#import "UIImage+Tint.h"
 
 #define ROW_NUMBER  4.0  //每一列的个数
 
@@ -44,7 +45,6 @@
     [layout release];
     [waterView release];
     
-    
     NSMutableString *ms = [[NSMutableString alloc] initWithString:@"我是中国人曹建荣"];
     if (CFStringTransform((__bridge CFMutableStringRef)ms, 0, kCFStringTransformMandarinLatin, NO)) {
         NSLog(@"Pingying: %@", ms); // wǒ shì zhōng guó rén
@@ -52,6 +52,8 @@
     if (CFStringTransform((__bridge CFMutableStringRef)ms, 0, kCFStringTransformStripDiacritics, NO)) {
         NSLog(@"Pingying: %@", ms); // wo shi zhong guo ren
     }
+    
+    [ms localizedCaseInsensitiveCompare:@"111"];
     
     NSDictionary *dic = @{@"name":@"valueName",@"icon":@"http://www.baidu.com"};
     UserModel *model = [[UserModel alloc] init];
@@ -299,7 +301,8 @@
             if (!cell) {
                 cell = [[[ClassmatesCell alloc] init] autorelease];
             }
-            [cell.icon setImage:[UIImage imageNamed:@"2.png"]];
+            UIImage *img = [UIImage imageNamed:@"2.png"];
+            [cell.icon setImage:[img imageWithGradientTintColor:[UIColor colorWithWhite:0.1 alpha:0.5]]];
 //            [cell.icon setImageWithURL:[NSURL URLWithString:model.tvPicVirtualPath] placeholderImage:[UIImage imageNamed:@"placeholder_horizontal"]];
 //            cell.name.text = [NSString stringWithFormat:@"点赞数：%ld",indexPath.row];
 //            cell.school.text = @"";
