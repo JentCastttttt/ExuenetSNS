@@ -12,6 +12,7 @@
 @synthesize section;
 @synthesize nameLabel;
 
+//- (id)dequeueReusableSupplementaryViewOfKind:(NSString*)elementKind withReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath*)indexPath   默认会调用initWithFrame这个方法。  而不是调用init方法
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

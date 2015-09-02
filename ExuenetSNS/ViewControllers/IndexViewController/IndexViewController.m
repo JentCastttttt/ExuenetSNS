@@ -104,6 +104,9 @@
             [app cancelLocalNotification:notification];
         }
     }
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    
+    return ;
     
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
     

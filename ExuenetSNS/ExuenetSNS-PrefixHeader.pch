@@ -26,6 +26,8 @@
 #import "UIColor+extends.h"
 #import "UIView+WhenTappedBlocks.h"
 #import "NSString+extension.h"
+#import "UIFont+Material.h"
+#import "Masonry.h"
 
 //当前程序版本号
 #define KBundleVersion @"BundleVersion"
@@ -41,7 +43,8 @@
  */
 
 #if TARGET_IPHONE_SIMULATOR
-#define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+//#define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
 #define NSLog(FORMAT, ...) nil
 #endif
