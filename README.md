@@ -22,7 +22,7 @@
 ---
 
 ####图片
-![帅图](https://avatars1.githubusercontent.com/u/8924436?v=3&u=b68a9ec6a4bf5c33cdbac2d55994342441abc368&s=400 "帅到爆")
+![帅图](http://img.xiazaizhijia.com/uploads/2016/0901/20160901021000969.jpg "帅到爆")
 
 ---
 
